@@ -82,7 +82,7 @@ Usará una utilidad de línea de comandos que crea una base de datos de **cosmic
     cosmicworks --endpoint <cosmos-endpoint> --key <cosmos-key> --datasets product
     ```
 
-    > &#128221; Por ejemplo, si el punto de conexión es: **https&shy;://dp420.documents.azure.com:443/** y la clave es: **fDR2ci9QgkdkvERTQ==**, el comando sería: ``cosmicworks --endpoint https://dp420.documents.azure.com:443/ --key fDR2ci9QgkdkvERTQ== --datasets product``
+    > &#128221; Por ejemplo, si el punto de conexión es **https&shy;://dp420.documents.azure.com:443/** y la clave es **fDR2ci9QgkdkvERTQ==**, el comando sería ``cosmicworks --endpoint https://dp420.documents.azure.com:443/ --key fDR2ci9QgkdkvERTQ== --datasets product``
 
 1. Espere a que el comando **cosmicworks** termine de poblar la cuenta con una base de datos, un contenedor y elementos.
 
@@ -140,7 +140,7 @@ Antes de modificar la directiva de indexación, primero ejecutará algunas consu
 
 1. Seleccione **Ejecutar consulta**.
 
-1. Observe los resultados y las estadísticas de la consulta. El cargo por unidad de solicitud ha aumentado debido a la cláusula **ORDER BY** .
+1. Observe los resultados y las estadísticas de la consulta. El cargo por unidad de solicitud ha aumentado debido a la cláusula **ORDER BY**.
 
 ## Creación de un índice compuesto en la directiva de indexación
 
@@ -150,7 +150,7 @@ Ahora, tendrá que crear un índice compuesto si ordena los elementos mediante v
 
 1. Elimine el contenido del área del editor.
 
-1. Cree una nueva consulta SQL que ordenará primero los resultados por el **categoryName** en orden descendente y, después, por el **precio** en orden ascendente:
+1. Cree una nueva consulta SQL que ordenará primero los resultados por **categoryName** en orden descendente y, después, por **price** en orden ascendente:
 
     ```
     SELECT 
@@ -222,7 +222,7 @@ Ahora, tendrá que crear un índice compuesto si ordena los elementos mediante v
 
 1. Elimine el contenido del área del editor.
 
-1. Cree una nueva consulta SQL que ordenará primero los resultados por el **categoryName** en orden descendente y, después, por el **precio** en orden ascendente:
+1. Cree una nueva consulta SQL que ordenará primero los resultados por **categoryName** en orden descendente y, después, por **price** en orden ascendente:
 
     ```
     SELECT 
@@ -242,7 +242,7 @@ Ahora, tendrá que crear un índice compuesto si ordena los elementos mediante v
 
 1. Elimine el contenido del área del editor.
 
-1. Cree una nueva consulta SQL que ordenará los resultados por el **categoryName** en orden descendente, después por **nombre** en orden ascendente y, por último, por el **precio** en orden ascendente:
+1. Cree una nueva consulta SQL que ordenará los resultados por **categoryName** en orden descendente, después por **nombre** en orden ascendente y, por último, por **price** en orden ascendente:
 
     ```
     SELECT 
@@ -310,7 +310,7 @@ Ahora, tendrá que crear un índice compuesto si ordena los elementos mediante v
 
 1. Elimine el contenido del área del editor.
 
-1. Cree una nueva consulta SQL que ordenará los resultados por el **categoryName** en orden descendente, después por **nombre** en orden ascendente y, por último, por el **precio** en orden ascendente:
+1. Cree una nueva consulta SQL que ordenará los resultados por **categoryName** en orden descendente, después por **nombre** en orden ascendente y, por último, por **price** en orden ascendente:
 
     ```
     SELECT 
