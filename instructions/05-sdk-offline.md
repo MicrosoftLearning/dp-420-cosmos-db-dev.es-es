@@ -12,11 +12,11 @@ En este laboratorio, se conectará al emulador de Azure Cosmos DB desde el SDK d
 
 ## Preparación del entorno de desarrollo
 
-Si aún no ha clonado el repositorio de código de laboratorio para **DP-420** al entorno en el que está trabajando en este laboratorio, siga estos pasos para hacerlo. De lo contrario, abra la carpeta clonada anteriormente en **Visual Studio Code**.
+Si aún no ha clonado el repositorio de código de laboratorio para **DP-420** al entorno en el que está trabajando en este laboratorio, siga estos pasos para hacerlo. De lo contrario, abra la carpeta clonada anteriormente en **Visual Studio Code**.
 
 1. Inicie **Visual Studio Code**.
 
-    > &#128221; Si aún no está familiarizado con la interfaz de Visual Studio Code, revise la [documentación de introducción][code.visualstudio.com/docs/getstarted]
+    > &#128221; Si aún no está familiarizado con la interfaz de Visual Studio Code, revise la [Documentación de introducción][code.visualstudio.com/docs/getstarted]
 
 1. Abra la paleta de comandos y ejecute **Git: Clonar** para clonar el repositorio de GitHub ``https://github.com/microsoftlearning/dp-420-cosmos-db-dev`` en una carpeta local de su elección.
 

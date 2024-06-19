@@ -30,20 +30,26 @@ Si aún no ha clonado el repositorio de código de laboratorio para **DP-420** a
 
     > &#128161; Para abrir un terminal de **Git Bash**, en el lado derecho del menú del terminal, haga clic en la lista desplegable junto al signo ****+ y elija *Git Bash*.
 
-1. En el **terminal Git Bash**, ejecute estos comandos. Los comandos abren una ventana del explorador para conectarse a Azure Portal donde utilizará las credenciales de laboratorio proporcionadas, ejecutará un script que crea una nueva cuenta Azure Cosmos DB y, a continuación, construirá e iniciará la aplicación que utilizará para rellenar la base de datos y completar los ejercicios. *Una vez que haya escrito la credencial proporcionada para la cuenta de Azure, la compilación puede tardar entre 15 y 20 minutos en completarse, por lo que puede ser un buen momento para tomar un café o té*.
+1. En el **terminal Git Bash**, ejecute estos comandos. Los comandos abren una ventana del explorador para conectarse a Azure Portal, donde usará las credenciales de laboratorio proporcionadas.
 
     ```
     "C:\Program Files (x86)\Microsoft SDKs\Azure\CLI2\python.exe" -m pip install pip-system-certs
     az login
     cd 16-measure-performance
-    bash init.sh
     dotnet add package Microsoft.Azure.Cosmos --version 3.22.1
+
+    ```
+    > &#128161; Si ejecutó primero el laboratorio **Costo de los datos de desnormalización** y no quitó los recursos de Azure creados por ese laboratorio, cierre el terminal integrado, omita el paso siguiente y vaya a la sección siguiente. Tenga en cuenta que si ya tiene los recursos creados por el laboratorio **Costo de los datos de desnormalización** e intenta ejecutar el script siguiente, se producirá un error en el script.
+
+1. En el **terminal Git Bash**, ejecute estos comandos. Los comandos ejecutan un script que crea una cuenta de Azure Cosmos DB y luego compilan e inician la aplicación que usa para rellenar la base de datos y completar los ejercicios. *Una vez que haya escrito la credencial proporcionada para la cuenta de Azure, la compilación puede tardar entre 15 y 20 minutos en completarse, por lo que puede ser un buen momento para tomar un café o té*.
+
+    ```
+    bash init.sh
     dotnet build
     dotnet run --load-data
     echo "Data load process completed."
 
     ```
-
 1. Cierre el terminal integrado.
 
 ## Medición del rendimiento de las entidades en contenedores independientes
@@ -140,5 +146,9 @@ Ahora vamos a consultar la misma información, pero con nuestras entidades inser
 Al comparar las RU/s de cada una de las consultas que ejecutó, verá que la última consulta en la que las entidades de cliente están en un solo documento es mucho menos costosa que el costo combinado por ejecutar las tres consultas de forma independiente. La latencia para devolver estos datos es menor porque los datos se devuelven en una sola operación.
 
 Cuando se busca un único elemento y se conoce la clave de partición y el identificador de los datos, se pueden recuperar estos datos mediante una *lectura puntual* llamando a `ReadItemAsync()` en el SDK de Azure Cosmos DB. Una lectura puntual es incluso más rápida que la consulta. Para los mismos datos de cliente, el costo es de solo 1 RU/s, lo que viene a ser casi una triple mejora.
+
+## Limpiar
+
+Elimine el grupo de recursos creado en este laboratorio.  Si no tiene acceso para quitar el grupo de recursos, quite todos los objetos de Azure creados por este laboratorio.
 
 [code.visualstudio.com/docs/getstarted]: https://code.visualstudio.com/docs/getstarted/tips-and-tricks

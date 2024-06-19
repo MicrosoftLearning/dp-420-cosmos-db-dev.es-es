@@ -32,14 +32,21 @@ Si aún no ha clonado el repositorio de código de laboratorio para **DP-420** a
 
     > &#128161; Para abrir un terminal de **Git Bash**, en el lado derecho del menú del terminal, haga clic en la lista desplegable junto al signo ****+ y elija *Git Bash*.
 
-1. En el **terminal Git Bash**, ejecute estos comandos. Los comandos abren una ventana del explorador para conectarse a Azure Portal donde utilizará las credenciales de laboratorio proporcionadas, ejecutará un script que crea una nueva cuenta Azure Cosmos DB y, a continuación, construirá e iniciará la aplicación que utilizará para rellenar la base de datos y completar los ejercicios. *Una vez que haya escrito la credencial proporcionada para la cuenta de Azure, la compilación puede tardar entre 15 y 20 minutos en completarse, por lo que puede ser un buen momento para tomar un café o té*.
+1. En el **terminal Git Bash**, ejecute estos comandos. Los comandos abren una ventana del explorador para conectarse a Azure Portal, donde usará las credenciales de laboratorio proporcionadas.
 
     ```
     "C:\Program Files (x86)\Microsoft SDKs\Azure\CLI2\python.exe" -m pip install pip-system-certs
     az login
     cd 17-denormalize
-    bash init.sh
     dotnet add package Microsoft.Azure.Cosmos --version 3.22.1
+    ```
+
+    > &#128161; Si ejecutó primero el laboratorio **Medir el rendimiento de las entidades del cliente** y no quitó los recursos de Azure creados por dicho laboratorio, cierre el terminal integrado, omita el paso siguiente y vaya a la próxima sección. Tenga en cuenta que si ya tiene los recursos creados por el laboratorio **Medir el rendimiento de las entidades del cliente** e intenta ejecutar el script siguiente, no lo conseguirá.
+
+1. En el **terminal Git Bash**, ejecute estos comandos. Los comandos ejecutan un script que crea una cuenta de Azure Cosmos DB y luego compilan la aplicación que usa para rellenar la base de datos y completar los ejercicios y la inicia. *Una vez que haya escrito la credencial proporcionada para la cuenta de Azure, la compilación puede tardar entre 15 y 20 minutos en completarse, por lo que puede ser un buen momento para tomar un café o té*.
+
+    ```
+    bash init.sh
     dotnet build
     dotnet run --load-data
     echo "Data Load completed."
@@ -523,5 +530,9 @@ Echemos un vistazo a la consulta para los 10 clientes principales.
     Quizás no se dé cuenta de que la consulta de los 10 clientes principales es una consulta entre particiones que se realiza en todas las particiones del contenedor.
 
     El laboratorio complementario a este señaló que debe procurar evitar consultas entre particiones. Sin embargo, en realidad, dichas consultas pueden ser correctas en situaciones en las que el contenedor sigue siendo pequeño o si la consulta no se ejecuta con frecuencia. Si la consulta se ejecuta con frecuencia o el contenedor es excepcionalmente grande, merece la pena explorar el costo de materializar estos datos en otro contenedor y usarlos para atender esta consulta.
+
+## Limpiar
+
+Elimine el grupo de recursos creado en este laboratorio.  Si no tiene el acceso necesario para quitar el grupo de recursos, quite todos los objetos de Azure creados por este laboratorio.
 
 [code.visualstudio.com/docs/getstarted]: https://code.visualstudio.com/docs/getstarted/tips-and-tricks

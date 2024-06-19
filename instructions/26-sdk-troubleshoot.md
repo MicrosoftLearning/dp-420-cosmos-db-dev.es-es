@@ -37,7 +37,7 @@ Azure Cosmos DB es un servicio de base de datos NoSQL basado en la nube que ad
     | **Configuración** | **Valor** |
     | ---: | :--- |
     | **Suscripción** | *Su suscripción de Azure existente* |
-    | **Grupo de recursos** | *Seleccione un grupo de recursos ya existente o cree uno nuevo* |
+    | **Grupo de recursos** | *Seleccione un grupo de recursos ya existente o cree un nuevo* |
     | **Account Name** | *Escriba un nombre único global*. |
     | **Ubicación** | *seleccione cualquier región disponible* |
     | **Capacity mode (Modo de capacidad)** | *Rendimiento aprovisionado* |
@@ -47,7 +47,7 @@ Azure Cosmos DB es un servicio de base de datos NoSQL basado en la nube que ad
 
 1. Espere a que se complete la tarea de implementación antes de continuar con esta tarea.
 
-1. Vaya al recurso de cuenta de **Azure Cosmos DB** recién creado y vaya al panel **Claves**.
+1. Vaya al recurso de cuenta de **Azure Cosmos DB** recién creado y vaya al panel **Claves**.
 
 1. Este panel contiene los detalles de conexión y las credenciales necesarias para conectarse a la cuenta desde el SDK. Específicamente:
 

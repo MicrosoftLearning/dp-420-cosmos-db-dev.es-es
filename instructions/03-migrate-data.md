@@ -20,7 +20,7 @@ Para acompañar al contenedor products, creará manualmente un contenedor **flat
 
 1. Inicie sesión en el portal con las credenciales de Microsoft asociadas a su suscripción.
 
-1. Seleccione **+ Crear un recurso**, busque *Cosmos DB* y, a continuación, cree un nuevo recurso de cuenta de **Azure Cosmos DB for NoSQL** con la siguiente configuración, dejando todas las opciones restantes en sus valores predeterminados:
+1. Seleccione **+ Crear un recurso**, busque *Cosmos DB* y, a continuación, cree un nuevo recurso de cuenta de **Azure Cosmos DB for NoSQL** con la siguiente configuración, dejando todas las opciones restantes en sus valores predeterminados:
 
     | **Configuración** | **Valor** |
     | ---: | :--- |
@@ -40,9 +40,9 @@ Para acompañar al contenedor products, creará manualmente un contenedor **flat
 
 1. Este panel contiene los detalles de conexión y las credenciales necesarias para conectarse a la cuenta desde el SDK. Específicamente:
 
-    1. Observe el campo **URI**. Usará este valor de **punto de conexión** más adelante en este ejercicio.
+    1. Observe el campo **URI**. Usará este valor de **endpoint** más adelante en este ejercicio.
 
-    1. Observe el campo **CLAVE PRINCIPAL**. Usará este valor de **clave** más adelante en este ejercicio.
+    1. Observe el campo **PRIMARY KEY**. Usará este valor de **clave** más adelante en este ejercicio.
 
 1. Mantenga abierta la pestaña del explorador, ya que volveremos a ella más adelante.
 
@@ -60,7 +60,7 @@ Para acompañar al contenedor products, creará manualmente un contenedor **flat
 
     > &#128161; Este comando puede tardar un par de minutos en completarse. Este comando generará el mensaje de advertencia (*Tool "cosmicworks" ya está instalado) si ya ha instalado la versión más reciente de esta herramienta en el pasado.
 
-1. Ejecute cosmicworks para inicializar la cuenta de Azure Cosmos DB con las siguientes opciones de línea de comandos:
+1. Ejecute cosmicworks para inicializar la cuenta de Azure Cosmos DB con las siguientes opciones de línea de comandos:
 
     | **Opción** | **Valor** |
     | ---: | :--- |
@@ -72,7 +72,7 @@ Para acompañar al contenedor products, creará manualmente un contenedor **flat
     cosmicworks --endpoint <cosmos-endpoint> --key <cosmos-key> --datasets product
     ```
 
-    > &#128221; Por ejemplo, si el punto de conexión es: **https&shy;://dp420.documents.azure.com:443/** y la clave es: **fDR2ci9QgkdkvERTQ==**, el comando sería: ``cosmicworks --endpoint https://dp420.documents.azure.com:443/ --key fDR2ci9QgkdkvERTQ== --datasets product``
+    > &#128221; Por ejemplo, si el punto de conexión es **https&shy;://dp420.documents.azure.com:443/** y la clave es **fDR2ci9QgkdkvERTQ==**, el comando sería: ``cosmicworks --endpoint https://dp420.documents.azure.com:443/ --key fDR2ci9QgkdkvERTQ== --datasets product``
 
 1. Espere a que el comando **cosmicworks** termine de poblar la cuenta con una base de datos, un contenedor y elementos.
 
@@ -115,7 +115,7 @@ Ahora que los recursos de Azure Cosmos DB for NoSQL están en vigor, creará un 
     | **Configuración** | **Valor** |
     | ---: | :--- |
     | **Suscripción** | *Su suscripción de Azure existente* |
-    | **Grupo de recursos** | *Seleccione un grupo de recursos ya existente o cree un nuevo* |
+    | **Grupo de recursos** | *Seleccione un grupo de recursos ya existente o cree uno nuevo* |
     | **Nombre** | *Escriba un nombre único global*. |
     | **Región** | *seleccione cualquier región disponible* |
     | **Versión** | *V2* |
