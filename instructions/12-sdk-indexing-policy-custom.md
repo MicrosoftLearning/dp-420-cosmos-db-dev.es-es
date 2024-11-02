@@ -1,6 +1,6 @@
 ---
 lab:
-  title: "Revisión de la directiva de indexación predeterminada para un contenedor de Azure Cosmos\_DB for NoSQL con el portal"
+  title: Configuración de una directiva de índice de un contenedor de Azure Cosmos DB para NoSQL mediante el SDK
   module: Module 6 - Define and implement an indexing strategy for Azure Cosmos DB for NoSQL
 ---
 
