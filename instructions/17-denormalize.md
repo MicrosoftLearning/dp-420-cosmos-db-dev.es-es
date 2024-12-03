@@ -43,7 +43,7 @@ Si aún no ha clonado el repositorio de código de laboratorio para **DP-420** a
 
     > &#128161; Si ejecutó primero el laboratorio **Medir el rendimiento de las entidades del cliente** y no quitó los recursos de Azure creados por dicho laboratorio, cierre el terminal integrado, omita el paso siguiente y vaya a la próxima sección. Tenga en cuenta que si ya tiene los recursos creados por el laboratorio **Medir el rendimiento de las entidades del cliente** e intenta ejecutar el script siguiente, no lo conseguirá.
 
-1. En el **terminal Git Bash**, ejecute estos comandos. Los comandos ejecutan un script que crea una cuenta de Azure Cosmos DB y luego compilan la aplicación que usa para rellenar la base de datos y completar los ejercicios y la inicia. *Una vez que haya escrito la credencial proporcionada para la cuenta de Azure, la compilación puede tardar entre 15 y 20 minutos en completarse, por lo que puede ser un buen momento para tomar un café o té*.
+1. En el **terminal Git Bash**, ejecute estos comandos. Los comandos ejecutan un script que crea una cuenta de Azure Cosmos DB y luego compilan e inician la aplicación que usa para rellenar la base de datos y completar los ejercicios. *Una vez que haya escrito la credencial proporcionada para la cuenta de Azure, la compilación puede tardar entre 15 y 20 minutos en completarse, por lo que puede ser un buen momento para tomar un café o té*.
 
     ```
     bash init.sh
@@ -533,6 +533,6 @@ Echemos un vistazo a la consulta para los 10 clientes principales.
 
 ## Limpiar
 
-Elimine el grupo de recursos creado en este laboratorio.  Si no tiene el acceso necesario para quitar el grupo de recursos, quite todos los objetos de Azure creados por este laboratorio.
+Elimine el grupo de recursos creado en este laboratorio.  Si no tiene acceso para quitar el grupo de recursos, quite todos los objetos de Azure creados por este laboratorio.
 
 [code.visualstudio.com/docs/getstarted]: https://code.visualstudio.com/docs/getstarted/tips-and-tricks
