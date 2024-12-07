@@ -18,7 +18,7 @@ Antes de completar este laboratorio, debe crear un nuevo [grupo de recursos][doc
 
 1. Seleccione **+ Create** (+ Crear).
 
-1. En el menú emergente **Crear un grupo de recursos**, cree un grupo de recursos con la siguiente configuración, dejando todas las opciones restantes en sus valores predeterminados:
+1. En el emergente **Crear un grupo de recursos**, cree un grupo de recursos con la siguiente configuración, dejando todas las opciones restantes en sus valores predeterminados:
 
     | **Configuración** | **Valor** |
     | ---: | :--- |
