@@ -37,7 +37,6 @@ Si aún no ha clonado el repositorio de código de laboratorio para **DP-420** a
     ```
     "C:\Program Files (x86)\Microsoft SDKs\Azure\CLI2\python.exe" -m pip install pip-system-certs
     az login
-    cd 17-denormalize
     dotnet add package Microsoft.Azure.Cosmos --version 3.22.1
     ```
 
@@ -103,6 +102,8 @@ Seguidamente, consulte el contenedor de productos para obtener todos los product
 
     ![Captura de pantalla del Explorador de datos de Azure Cosmos DB que muestra los resultados de la consulta en el contenedor de productos.](media/16-product-results.png)
 
+   > **Nota**: puedes observar un cargo de solicitud ligeramente diferente al que se notifica en este ejercicio, dentro de un intervalo de +/- 0,1.
+
 ### Consulta de las etiquetas de cada producto
 
 A continuación, consulte el contenedor productTag tres veces para cada uno de los tres productos: "HL Headset", "LL Headset" y "ML Headset".
@@ -139,7 +140,7 @@ A continuación, ejecute una consulta para devolver las etiquetas de LL Headset.
 
     Esta consulta devuelve las cinco etiquetas del producto LL Headset.
 
-1. Seleccione la pestaña **Estadísticas de consulta** y anote el cargo de solicitud de 3,45 RU.
+1. Seleccione la pestaña **Estadísticas de consulta** y anote el cargo de solicitud de 3,47 RU.
 
     ![Captura de pantalla de los resultados de la consulta al contenedor de etiquetas de producto para las estadísticas de consulta de LL Headsets.](media/16-product-tag-ll-stats.png)
 
@@ -157,7 +158,7 @@ Por último, ejecute una consulta para devolver las etiquetas de ML Headset.
 
     Esta consulta devuelve las cinco etiquetas del producto ML Headset.
 
-1. Seleccione la pestaña **Estadísticas de consulta** y anote el cargo de solicitud de 3,19 RU.
+1. Seleccione la pestaña **Estadísticas de consulta** y anote el cargo de solicitud de 3,2 RU.
 
     ![Captura de pantalla de los resultados de la consulta al contenedor de etiquetas de producto para las estadísticas de consulta de ML Headsets.](media/16-product-tag-ml-stats.png)
 
@@ -170,9 +171,9 @@ Ahora, vamos a sumar todos los costos de RU de cada una de las consultas que ha 
 |Nombre de la categoría|2.92|
 |Producto|2.89|
 |Etiquetas de producto HL|3,06|
-|Etiquetas de producto LL|3.45|
-|Etiquetas de producto ML|3,19|
-|**Costo total de RU**|**15.51**|
+|Etiquetas de producto LL|3.47|
+|Etiquetas de producto ML|3,20|
+|**Costo total de RU**|**15,54**|
 
 ### Ejecución de las mismas consultas para el diseño NoSQL
 
