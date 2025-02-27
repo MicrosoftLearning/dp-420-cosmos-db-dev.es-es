@@ -1,26 +1,30 @@
 ---
+title: "01: Conexión a Azure Cosmos\_DB for NoSQL con el SDK"
 lab:
   title: "01: Conexión a Azure Cosmos\_DB for NoSQL con el SDK"
   module: Use the Azure Cosmos DB for NoSQL SDK
+layout: default
+nav_order: 4
+parent: JavaScript SDK labs
 ---
 
 # Conexión a Azure Cosmos DB for NoSQL con el SDK
 
 El SDK de Azure para JavaScript (Node.js y explorador) es un conjunto de bibliotecas cliente que proporciona una interfaz de desarrollador coherente para interactuar con muchos servicios de Azure. Las bibliotecas cliente son paquetes que se usarían para consumir estos recursos e interactuar con ellos.
 
-En este laboratorio, te conectarás a una cuenta de Azure Cosmos DB for NoSQL mediante el SDK de Azure para JavaScript.
+En este laboratorio, conectarás a una cuenta de Azure Cosmos DB for NoSQL mediante el SDK de Azure para JavaScript.
 
 ## Preparación del entorno de desarrollo
 
-Si aún no has clonado el repositorio de código de laboratorio para **Compilación de copilotos con Azure Cosmos DB**) y configurado el entorno local, consulta las instrucciones de [Configuración del entorno de laboratorio local](00-setup-lab-environment.md) para hacerlo.
+Si aún no has clonado el repositorio de código del laboratorio de **Compilación de copilotos con Azure Cosmos DB** y configurado el entorno local, consulta las instrucciones de [Configuración del entorno de laboratorio local](00-setup-lab-environment.md) para hacerlo.
 
 ## Creación de una cuenta de Azure Cosmos DB for NoSQL
 
-Si ya has creado una cuenta de Azure Cosmos DB for NoSQL para la **Compilación de copilotos con laboratorios de Azure Cosmos DB** en este sitio, puedes usarla para este laboratorio y pasar a la [sección siguiente](#import-the-azurecosmos-library). De lo contrario, consulta las instrucciones de [Configuración de Azure Cosmos DB](../../common/instructions/00-setup-cosmos-db.md) para crear una cuenta de Azure Cosmos DB for NoSQL que usarás en todos los módulos de laboratorio y conceder a tu identidad de usuario acceso para administrar los datos de la cuenta mediante la asignación al rol **Colaborador de datos integrado de Cosmos DB**.
+Si ya creaste una cuenta de Azure Cosmos DB for NoSQL para los laboratorios de **Compilación de copilotos con Azure Cosmos DB** de este sitio, puedes usarla para este laboratorio y pasar a la [siguiente sección](#import-the-azurecosmos-library). De lo contrario, consulta las instrucciones de [Configuración de Azure Cosmos DB](../../common/instructions/00-setup-cosmos-db.md) para crear una cuenta de Azure Cosmos DB for NoSQL que usarás en todos los módulos de laboratorio y concede a tu identidad de usuario acceso para administrar los datos de la cuenta mediante la asignación al rol **Colaborador de datos integrado de Cosmos DB**.
 
-## Importación de la biblioteca @azure/cosmos
+## Importa la biblioteca @azure/cosmos
 
-La biblioteca **@azure/cosmos** está disponible en **npm** para facilitar la instalación en los proyectos de JavaScript.
+La biblioteca **@azure/cosmos** está disponible en **npm** para facilitar su instalación en los proyectos JavaScript.
 
 1. En **Visual Studio Code**, en el panel **Explorer**, ve a la carpeta **javascript/01-sdk-connect**.
 
@@ -28,7 +32,7 @@ La biblioteca **@azure/cosmos** está disponible en **npm** para facilitar la in
 
     > &#128221; Este comando abrirá el terminal con el directorio inicial ya establecido en la carpeta **javascript/01-sdk-connect**.
 
-1. Inicializa un nuevo proyecto de Node.js:
+1. Inicia un nuevo proyecto Node.js:
 
     ```bash
     npm init -y
@@ -40,21 +44,21 @@ La biblioteca **@azure/cosmos** está disponible en **npm** para facilitar la in
     npm install @azure/cosmos
     ```
 
-1. Instala la biblioteca [@azure/identity][npmjs.com/package/@azure/identity], que nos permite usar la autenticación de Azure para conectarnos al área de trabajo de Azure Cosmos DB mediante el siguiente comando:
+1. Instala la biblioteca [@azure/identity][npmjs.com/package/@azure/identity], que permite utilizar la autenticación de Azure para conectarse al espacio de trabajo de Azure Cosmos DB, mediante el siguiente comando:
 
     ```bash
     npm install @azure/identity
     ```
 
-## Uso de la biblioteca @azure/cosmos
+## Usa la biblioteca @azure/cosmos
 
-Una vez importada la biblioteca de Azure Cosmos DB del SDK de Azure para JavaScript, puedes usar inmediatamente sus clases para conectarte a una cuenta de Azure Cosmos DB for NoSQL. La clase **CosmosClient** es la clase principal que se usa para establecer la conexión inicial a una cuenta de Azure Cosmos DB for NoSQL.
+Una vez importada la biblioteca de Azure Cosmos DB del SDK de Azure para JavaScript, puedes utilizar inmediatamente sus clases para conectarte a una cuenta de Azure Cosmos DB for NoSQL. La clase **CosmosClient** es la clase principal que se usa para establecer la conexión inicial a una cuenta de Azure Cosmos DB for NoSQL.
 
 1. En **Visual Studio Code**, en el panel **Explorer**, ve a la carpeta **javascript/01-sdk-connect**.
 
-1. Abre el archivo JavaScript vacío denominado **script.js**.
+1. Abre el archivo JavaScript vacío llamado **script.js**.
 
-1. Agrega las siguientes instrucciones `require` para importar las bibliotecas **@azure/cosmos** y **@azure/identity**:
+1. Agrega las siguientes instrucciones `require` para importar las bibliotecas **@azure/cosmos** y **@azure/identity**:
 
     ```javascript
     const { CosmosClient } = require("@azure/cosmos");
@@ -69,7 +73,7 @@ Una vez importada la biblioteca de Azure Cosmos DB del SDK de Azure para JavaScr
     const credential = new DefaultAzureCredential();
     ```
 
-    > &#128221; Por ejemplo, si el punto de conexión es: **https://dp420.documents.azure.com:443/**, la instrucción sería: **const endpoint = "https://dp420.documents.azure.com:443/";**.
+    > &#128221; Por ejemplo, si el punto final es **https://dp420.documents.azure.com:443/**, la instrucción sería **const endpoint = "https://dp420.documents.azure.com:443/";**.
 
 1. Agrega una nueva variable denominada **client** e inicialízala como una nueva instancia de la clase **CosmosClient** mediante las variables **endpoint** y **credential**:
 
@@ -93,7 +97,7 @@ Una vez importada la biblioteca de Azure Cosmos DB del SDK de Azure para JavaScr
     main().catch((error) => console.error(error));
     ```
 
-1. Ahora el aspecto del archivo **script.js** debería ser similar a este:
+1. Tu archivo **script.js** debería tener ahora este aspecto:
 
     ```javascript
     const { CosmosClient } = require("@azure/cosmos");
@@ -118,23 +122,23 @@ Una vez importada la biblioteca de Azure Cosmos DB del SDK de Azure para JavaScr
 
 ## Prueba del script
 
-Ahora que está completo el código de JavaScript para conectarse a la cuenta de Azure Cosmos DB for NoSQL, puedes probar el script. Este script imprimirá el nivel de coherencia predeterminado y el nombre de la primera región grabable. Al crear la cuenta, especificaste una ubicación y deberías esperar ver ese mismo valor de ubicación impreso como resultado de este script.
+Ahora que el código de JavaScript para conectarse a la cuenta de Azure Cosmos DB for NoSQL está completo, puedes probar el script. Este script imprimirá el nivel de coherencia predeterminado y el nombre de la primera región grabable. Al crear la cuenta, especificaste una ubicación y deberías esperar ver ese mismo valor de ubicación impreso como resultado de este script.
 
-1. En **Visual Studio Code**, abre el menú contextual de la carpeta **avascript/01-sdk-connect** y, a continuación, selecciona **Open in Integrated Terminal** para abrir una nueva instancia de terminal.
+1. En **Visual Studio Code**, abre el menú contextual de la carpeta **javascript/01-sdk-connect** y, a continuación, selecciona **Open in Integrated Terminal** para abrir una nueva instancia de terminal.
 
-1. Antes de ejecutar el script, debes iniciar sesión en Azure mediante el comando `az login`. En la ventana terminal, ejecuta lo siguiente:
+1. Antes de ejecutar el script, debes iniciar sesión en Azure mediante el comando `az login`. En la ventana de terminal, ejecuta lo siguiente:
 
     ```bash
     az login
     ```
 
-1. Ejecute el script mediante el comando `node`:
+1. Ejecuta el script mediante el comando `node`:
 
     ```bash
     node script.js
     ```
 
-1. El script ahora generará el nivel de coherencia predeterminado de la cuenta y la primera región grabable. Por ejemplo, si el nivel de coherencia predeterminado para la cuenta es **Sesión** y la primera región grabable era **Este de EE. UU.**, el script generaría:
+1. El script ahora generará el nivel de coherencia predeterminado de la cuenta y la primera región grabable. Por ejemplo, si el nivel de coherencia predeterminado para la cuenta es **Sesión** y la primera región grabable es **Este de EE. UU.**, el script generaría:
 
     ```text
     Consistency Policy: Session
