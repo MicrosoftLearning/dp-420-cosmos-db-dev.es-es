@@ -8,7 +8,7 @@ lab:
 
 El desencadenador de Azure Cosmos DB para Azure Functions se implementa mediante un procesador de fuente de cambios. Puede crear funciones que respondan a las operaciones de creación y actualización en el contenedor de Azure Cosmos DB for NoSQL con este conocimiento. Si ha implementado manualmente un procesador de fuente de cambios, la configuración de Azure Functions es similar.
 
-En este laboratorio, hará lo siguiente:
+En este laboratorio, crearás una aplicación de funciones y todos sus recursos necesarios, que supervisa la información de registro de la base de datos y de los resultados para cada operación detectada dentro de él.
 
 ## Creación de una cuenta de Azure Cosmos DB for NoSQL
 
@@ -115,7 +115,7 @@ Ahora debería poder supervisar la función de la aplicación.
 
 Para empezar a escribir código, deberá crear el recurso de Azure Functions y sus recursos dependientes (Application Insights, Storage) mediante el asistente para la creación.
 
-1. Seleccione **+ Crear un recurso**, busque *Functions*, y a continuación, cree un nuevo recurso de cuenta **Function App** con la siguiente configuración, dejando todas las opciones restantes en sus valores predeterminados:
+1. Selecciona **+ Crear un recurso**, busca *Funciones* y, a continuación, crea un nuevo recurso de cuenta de **Aplicación de funciones**. Selecciona **Consumo** como opción de hospedaje, configura la aplicación con la siguiente configuración y deja todas las opciones restantes en sus valores predeterminados:
 
     | **Configuración** | **Valor** |
     | ---: | :--- |
@@ -124,7 +124,7 @@ Para empezar a escribir código, deberá crear el recurso de Azure Functions y s
     | **Nombre** | *Escriba un nombre único global*. |
     | **Publicar** | *Código* |
     | **Pila en tiempo de ejecución** | *.NET* |
-    | **Versión** | *6 (LTS) En proceso* |
+    | **Versión** | *8 (LTS) en curso* |
     | **Región** | *seleccione cualquier región disponible* |
     | **Cuenta de almacenamiento** | *Creación de una cuenta de almacenamiento nueva* |
 
@@ -132,17 +132,14 @@ Para empezar a escribir código, deberá crear el recurso de Azure Functions y s
 
 1. Espere a que se complete la tarea de implementación antes de continuar con esta tarea.
 
-1. Vaya al recurso de cuenta de **Azure Functions** recién creado y vaya al panel **Functions**.
-
-1. En el panel **Functions**, seleccione **+ Crear**.
+1. Ve al recurso de cuenta de **Azure Functions** recién creado y, en la página de información general, selecciona **Crear función**.
 
 1. En el emergente **Crear función**, cree una función con la siguiente configuración, dejando todas las opciones restantes en sus valores predeterminados:
 
     | **Configuración** | **Valor** |
     | ---: | :--- |
-    | **Entorno de desarrollo** | *Desarrollo en el portal* |
     | **Seleccione una plantilla** | *Desencadenador de Azure Cosmos DB* |
-    | **Nueva función** | *``ItemsListener``* |
+    | **Nombre de la función** | *``ItemsListener``* |
     | **Conexión de la cuenta de Cosmos DB** | *Seleccionar nueva* &vert; *Seleccionar cuenta de Azure Cosmos DB* &vert; *Seleccione la cuenta de Azure Cosmos DB que creó anteriormente* |
     | **Nombre de la base de datos** | *``cosmicworks``* |
     | **Nombre de colección** | *``products``* |
@@ -153,9 +150,7 @@ Para empezar a escribir código, deberá crear el recurso de Azure Functions y s
 
 La función que creó anteriormente es un script de C# que se edita en el portal. Ahora usará el portal para escribir una función corta para generar el identificador único de cualquier elemento insertado o actualizado en el contenedor.
 
-1. En el panel **ItemsListener** &vert; **Function**, vaya al panel **Código y pruebas**.
-
-1. En el editor del script **run.csx**, elimine el contenido del área del editor.
+1. En el panel **ItemsListener**&vert;**Code + Test**, ve al editor del script **run.csx** y elimina su contenido.
 
 1. En el área del editor, haga referencia a la biblioteca **Microsoft.Azure.DocumentDB.Core**:
 
@@ -223,7 +218,7 @@ La función que creó anteriormente es un script de C# que se edita en el portal
     }
     ```
 
-1. Expanda la sección **Registros** para conectarse a los registros de streaming de la función actual.
+1. Expande la sección **Registros** en la parte inferior de la página, expande los **registros de App Insights** y selecciona **Registros del sistema de archivos** para conectarte a los registros de streaming de la función actual.
 
     > &#128161; Puede tardar un par de segundos en conectarse al servicio de registro de streaming. Verá un mensaje en la salida del registro una vez que esté conectado.
 
