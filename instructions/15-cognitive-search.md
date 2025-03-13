@@ -203,14 +203,15 @@ Ahora que la vista materializada de los datos de Azure Cosmos DB for NoSQL est
 1. Observe que en el **editor de consultas JSON**, la sintaxis de la consulta de búsqueda JSON predeterminada que devuelve todos los resultados posibles mediante un operador **\*** (comodín).
 
    ```json
-   {
-       "search": "*"
-   }
+    {
+      "search": "*",
+      "count": true
+    }
    ```
 
 1. Seleccione el botón **Buscar** para realizar la búsqueda.
 
-1. Observe que esta consulta de búsqueda devuelve todos los resultados posibles.
+1. Observa que esta consulta de búsqueda devuelve todos los resultados posibles, pero también incluye un campo de metadatos que indica el recuento total de resultados incluso si no se incluyen todos en la misma página.
 
 1. En el **editor de consultas JSON**, escriba la siguiente consulta y, luego, seleccione **Buscar**:
 
@@ -221,17 +222,6 @@ Ahora que la vista materializada de los datos de Azure Cosmos DB for NoSQL est
     ```
 
 1. Observe que esta consulta de búsqueda devuelve resultados que contienen los términos **touring** o **3000**, lo que proporciona una puntuación más alta a los resultados que contienen ambos términos. Los resultados se clasifican entonces en orden descendente por campo **@search.score**.
-
-1. En el **editor de consultas JSON**, escriba la siguiente consulta y, luego, seleccione **Buscar**:
-
-    ```json
-    {
-        "search": "red"
-        , "count": true
-    }
-    ```
-
-1. Observe que esta consulta de búsqueda devuelve resultados con el término **red**, pero ahora también incluye un campo de metadatos que indica el recuento total de resultados incluso si no se incluyen todos en la misma página.
 
 1. En el **editor de consultas JSON**, escriba la siguiente consulta y, luego, seleccione **Buscar**:
 
