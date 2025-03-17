@@ -1,11 +1,7 @@
 ---
-title: Habilitación de proveedores de recursos
 lab:
   title: Habilitación de proveedores de recursos
   module: Setup
-layout: default
-nav_order: 2
-parent: Common setup instructions
 ---
 
 # Habilitación de proveedores de recursos de Azure
@@ -21,8 +17,6 @@ Hay algunos proveedores de recursos que se deben estar registrados en la suscrip
     > &#128161; Como alternativa, expanda el menú **&#8801;**, seleccione **Todos los servicios** y, en la categoría **Todos**, seleccione **Suscripciones**.
 
 1. Seleccione la suscripción a Azure.
-
-    > &#128221; Si tiene varias suscripciones, seleccione la que creó canjeando el Pase para Azure.
 
 1. En la hoja de la suscripción, en la sección **Configuración**, seleccione **Proveedores de recursos**.
 
