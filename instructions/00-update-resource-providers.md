@@ -18,8 +18,6 @@ Hay algunos proveedores de recursos que se deben estar registrados en la suscrip
 
 1. Seleccione la suscripción a Azure.
 
-    > &#128221; Si tiene varias suscripciones, seleccione la que creó canjeando el Pase para Azure.
-
 1. En la hoja de la suscripción, en la sección **Configuración**, seleccione **Proveedores de recursos**.
 
 1. En la lista de proveedores de recursos, asegúrese de que están registrados los proveedores siguientes:
