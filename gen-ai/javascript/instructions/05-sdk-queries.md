@@ -1,11 +1,7 @@
 ---
-title: "05: Ejecución de una consulta con el SDK de Azure Cosmos\_DB for NoSQL"
 lab:
   title: "05: Ejecución de una consulta con el SDK de Azure Cosmos\_DB for NoSQL"
   module: Query the Azure Cosmos DB for NoSQL
-layout: default
-nav_order: 8
-parent: JavaScript SDK labs
 ---
 
 # Ejecución de una consulta con el SDK de Azure Cosmos DB for NoSQL
@@ -22,11 +18,11 @@ Si aún no has clonado el repositorio de código del laboratorio de **Compilaci�
 
 ## Creación de una cuenta de Azure Cosmos DB for NoSQL
 
-Si ya has creado una cuenta de Azure Cosmos DB for NoSQL para la **Compilación de copilotos con laboratorios de Azure Cosmos DB** en este sitio, puedes usarla para este laboratorio y pasar a la [sección siguiente](#create-azure-cosmos-db-database-and-container-with-sample-data). De lo contrario, consulta las instrucciones de [Configuración de Azure Cosmos DB](../../common/instructions/00-setup-cosmos-db.md) para crear una cuenta de Azure Cosmos DB for NoSQL que usarás en todos los módulos de laboratorio y concede a tu identidad de usuario acceso para administrar los datos de la cuenta mediante la asignación al rol **Colaborador de datos integrado de Cosmos DB**.
+Si ya has creado una cuenta de Azure Cosmos DB for NoSQL para los laboratorios de **Compilación de copilotos de Azure Cosmos DB** en este sitio, puedes usarla para este laboratorio y pasar a la [sección siguiente](#create-azure-cosmos-db-database-and-container-with-sample-data). De lo contrario, consulta las instrucciones de [Configuración de Azure Cosmos DB](../../common/instructions/00-setup-cosmos-db.md) para crear una cuenta de Azure Cosmos DB for NoSQL que usarás en todos los módulos de laboratorio y concede a tu identidad de usuario acceso para administrar los datos de la cuenta mediante la asignación al rol **Colaborador de datos integrado de Cosmos DB**.
 
 ## Creación de un contenedor y una base de datos de Azure Cosmos DB con datos de ejemplo
 
-Si ya has creado una base de datos de Azure Cosmos DB denominada **cosmicworks-full** y un contenedor dentro de él denominado **products**, que se ha cargado previamente con datos de ejemplo, puedes usarlo para este laboratorio y pasar a la [sección siguiente](#import-the-azurecosmos-library). De lo contrario, sigue los pasos siguientes para crear una nueva base de datos y un contenedor de ejemplo.
+Si ya has creado una base de datos de Azure Cosmos DB denominada **cosmicworks-full** y un contenedor dentro de ella denominada **products**, que se ha cargado previamente con datos de ejemplo, puedes usarla para este laboratorio y pasar a la [sección siguiente](#import-the-azurecosmos-library). De lo contrario, sigue los pasos siguientes para crear una nueva base de datos y un contenedor de ejemplo.
 
 <details markdown=1>
 <summary markdown="span"><strong>Haz clic para expandir o contraer los pasos para crear una base de datos y un contenedor con los datos de ejemplo.</strong></summary>

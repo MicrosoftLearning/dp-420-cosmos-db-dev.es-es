@@ -1,11 +1,7 @@
 ---
-title: '03: Creación y actualización de documentos con el SDK de Azure Cosmos DB for NoSQL'
 lab:
-  title: 03 - Creación y actualización de documentos con el SDK de Azure Cosmos DB for NoSQL
+  title: '03: Creación y actualización de documentos con el SDK de Azure Cosmos DB for NoSQL'
   module: Implement Azure Cosmos DB for NoSQL point operations
-layout: default
-nav_order: 6
-parent: Python SDK labs
 ---
 
 # Creación y actualización de documentos con el SDK de Azure Cosmos DB for NoSQL
@@ -20,7 +16,7 @@ Si aún no has clonado el repositorio de código del laboratorio de **Compilaci�
 
 ## Creación de una cuenta de Azure Cosmos DB for NoSQL
 
-Si ya has creado una cuenta de Azure Cosmos DB for NoSQL para los laboratorios de **Compilación de copilotos con Azure Cosmos DB** en este sitio, puedes usarla para este laboratorio y pasar a la [sección siguiente](#install-the-azure-cosmos-library). De lo contrario, consulta las instrucciones de [Configuración de Azure Cosmos DB](../../common/instructions/00-setup-cosmos-db.md) para crear una cuenta de Azure Cosmos DB for NoSQL que usarás en todos los módulos de laboratorio y concede a tu identidad de usuario acceso para administrar los datos de la cuenta mediante la asignación al rol **Colaborador de datos integrado de Cosmos DB**.
+Si ya has creado una cuenta de Azure Cosmos DB for NoSQL para los laboratorios de **Compilación de copilotos de Azure Cosmos DB** en este sitio, puedes usarla para este laboratorio y pasar a la [sección siguiente](#install-the-azure-cosmos-library). De lo contrario, consulta las instrucciones de [Configuración de Azure Cosmos DB](../../common/instructions/00-setup-cosmos-db.md) para crear una cuenta de Azure Cosmos DB for NoSQL que usarás en todos los módulos de laboratorio y concede a tu identidad de usuario acceso para administrar los datos de la cuenta mediante la asignación al rol **Colaborador de datos integrado de Cosmos DB**.
 
 ## Instalación de la biblioteca azure-cosmos
 
@@ -51,7 +47,7 @@ La biblioteca **azure-cosmos** está disponible en **PyPI** para facilitar la in
    pip install asyncio
    ```
 
-1. La versión asincrónica del SDK también requiere la biblioteca `aiohttp`. Instálalo con el comando siguiente:
+1. La versión asincrónica del SDK también requiere la biblioteca `aiohttp`. Instálala con el comando siguiente:
 
    ```bash
    pip install aiohttp
@@ -347,8 +343,8 @@ Al aprender el SDK, no es raro usar una cuenta de Azure Cosmos DB en línea o el
 
     | **Propiedad** | **Valor** |
     | ---: | :--- |
-    | **Nombre** | *Sillín para carretera* |
-    | **Precio** | *45,99 $* |
+    | **Name** | *Sillín para carretera* |
+    | **Price** | *$45.99* |
 
     > &#128221; En este momento, estos valores no deben haberse cambiado desde que creaste el artículo. Estos valores se cambiarán en este ejercicio.
 
@@ -378,7 +374,7 @@ Al aprender el SDK, no es raro usar una cuenta de Azure Cosmos DB en línea o el
    await container.replace_item(item=item_id, body=saddle)
    ```
 
-1. Una vez que haya terminado, el archivo de código debería incluir:
+1. Una vez que hayas terminado, el archivo de código debería incluir:
 
    ```python
    from azure.cosmos import PartitionKey

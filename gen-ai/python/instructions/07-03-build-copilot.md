@@ -1,11 +1,7 @@
 ---
-title: '07.3: Compilación de un copiloto con Python y Azure Cosmos DB for NoSQL'
 lab:
   title: '07.3: Compilación de un copiloto con Python y Azure Cosmos DB for NoSQL'
   module: Build copilots with Python and Azure Cosmos DB for NoSQL
-layout: default
-nav_order: 12
-parent: Python SDK labs
 ---
 
 # Compilación de un copiloto con Python y Azure Cosmos DB for NoSQL
@@ -826,7 +822,7 @@ Hasta ahora, has dado al copiloto la capacidad de realizar acciones para aplicar
    """
    ```
 
-6. Guarde el archivo `main.py`.
+6. Guarda el archivo `main.py`.
 
 ## Prueba de la característica de vector de búsqueda
 

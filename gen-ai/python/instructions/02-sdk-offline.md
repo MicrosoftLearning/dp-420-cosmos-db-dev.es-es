@@ -1,11 +1,7 @@
 ---
-title: "02: Configuración del SDK de Python de Azure\_Cosmos\_DB para el desarrollo sin conexión"
 lab:
-  title: "02: Configuración del SDK de Python de Azure\_Cosmos\_DB para el desarrollo sin conexión"
+  title: 02 - Configuración del SDK de JavaScript de Azure Cosmos DB para el desarrollo sin conexión
   module: Configure the Azure Cosmos DB for NoSQL SDK
-layout: default
-nav_order: 5
-parent: Python SDK labs
 ---
 
 # Configuración del SDK de Python de Azure Cosmos DB para el desarrollo sin conexión

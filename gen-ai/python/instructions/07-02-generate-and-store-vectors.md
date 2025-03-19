@@ -1,11 +1,7 @@
 ---
-title: '07.2: Generación de incrustaciones de vectores con Azure OpenAI y almacenaje en Azure Cosmos DB for NoSQL'
 lab:
   title: '07.2: Generación de incrustaciones de vectores con Azure OpenAI y almacenaje en Azure Cosmos DB for NoSQL'
   module: Build copilots with Python and Azure Cosmos DB for NoSQL
-layout: default
-nav_order: 11
-parent: Python SDK labs
 ---
 
 # Generación de incrustaciones de vectores con Azure OpenAI y almacenaje en Azure Cosmos DB for NoSQL
@@ -232,7 +228,7 @@ El SDK de Python para Azure OpenAI proporciona acceso a clases síncronas y así
            return response.data[0].embedding
    ```
 
-8. Guarde el archivo `main.py`.
+8. Guarda el archivo `main.py`.
 
 ## Prueba de la función de inserción
 

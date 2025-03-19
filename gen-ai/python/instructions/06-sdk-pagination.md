@@ -1,11 +1,7 @@
 ---
-title: "06: Paginación de resultados de consultas de producto cruzado con el SDK de Azure Cosmos\_DB for NoSQL"
 lab:
   title: "06: Paginación de resultados de consultas de producto cruzado con el SDK de Azure Cosmos\_DB for NoSQL"
   module: Author complex queries with the Azure Cosmos DB for NoSQL
-layout: default
-nav_order: 9
-parent: Python SDK labs
 ---
 
 # Paginación de resultados de consultas de producto cruzado con el SDK de Azure Cosmos DB for NoSQL
@@ -20,7 +16,7 @@ Si aún no has clonado el repositorio de código del laboratorio de **Compilaci�
 
 ## Creación de una cuenta de Azure Cosmos DB for NoSQL
 
-Si ya has creado una cuenta de Azure Cosmos DB for NoSQL para la **Compilación de copilotos con laboratorios de Azure Cosmos DB** en este sitio, puedes usarla para este laboratorio y pasar a la [sección siguiente](#create-azure-cosmos-db-database-and-container-with-sample-data). De lo contrario, consulta las instrucciones de [Configuración de Azure Cosmos DB](../../common/instructions/00-setup-cosmos-db.md) para crear una cuenta de Azure Cosmos DB for NoSQL que usarás en todos los módulos de laboratorio y concede a tu identidad de usuario acceso para administrar los datos de la cuenta mediante la asignación al rol **Colaborador de datos integrado de Cosmos DB**.
+Si ya has creado una cuenta de Azure Cosmos DB for NoSQL para los laboratorios de **Compilación de copilotos de Azure Cosmos DB** en este sitio, puedes usarla para este laboratorio y pasar a la [sección siguiente](#create-azure-cosmos-db-database-and-container-with-sample-data). De lo contrario, consulta las instrucciones de [Configuración de Azure Cosmos DB](../../common/instructions/00-setup-cosmos-db.md) para crear una cuenta de Azure Cosmos DB for NoSQL que usarás en todos los módulos de laboratorio y concede a tu identidad de usuario acceso para administrar los datos de la cuenta mediante la asignación al rol **Colaborador de datos integrado de Cosmos DB**.
 
 ## Creación de un contenedor y una base de datos de Azure Cosmos DB con datos de ejemplo
 
@@ -214,9 +210,9 @@ Al procesar los resultados de la consulta, debes asegurarte de que el código av
 
     > &#128161; La consulta coincidirá con cientos de elementos del contenedor de productos.
 
-1. Cierre el terminal integrado.
+1. Cierra el terminal integrado.
 
-1. Cierre **Visual Studio Code**.
+1. Cierra **Visual Studio Code**.
 
 [code.visualstudio.com/docs/getstarted]: https://code.visualstudio.com/docs/getstarted/tips-and-tricks
 [pypi.org/project/azure-cosmos]: https://pypi.org/project/azure-cosmos

@@ -1,11 +1,7 @@
 ---
-title: "05: Ejecución de una consulta con el SDK de Azure Cosmos\_DB for NoSQL"
 lab:
   title: "05: Ejecución de una consulta con el SDK de Azure Cosmos\_DB for NoSQL"
   module: Query the Azure Cosmos DB for NoSQL
-layout: default
-nav_order: 8
-parent: Python SDK labs
 ---
 
 # Ejecución de una consulta con el SDK de Azure Cosmos DB for NoSQL
@@ -18,11 +14,11 @@ En este laboratorio, usarás un iterador para procesar un conjunto de resultados
 
 ## Preparación del entorno de desarrollo
 
-Si aún no has clonado el repositorio de código del laboratorio para **Compilación de copilotos con Azure Cosmos DB** y configurado el entorno local, consulta las instrucciones de [Configuración del entorno de laboratorio local](00-setup-lab-environment.md) para hacerlo.
+Si aún no has clonado el repositorio de código del laboratorio de **Compilación de copilotos con Azure Cosmos DB** y configurado el entorno local, consulta las instrucciones de [Configuración del entorno de laboratorio local](00-setup-lab-environment.md) para hacerlo.
 
 ## Creación de una cuenta de Azure Cosmos DB for NoSQL
 
-Si ya has creado una cuenta de Azure Cosmos DB for NoSQL para la **Compilación de copilotos con laboratorios de Azure Cosmos DB** en este sitio, puedes usarla para este laboratorio y pasar a la [sección siguiente](#create-azure-cosmos-db-database-and-container-with-sample-data). De lo contrario, consulta las instrucciones de [Configuración de Azure Cosmos DB](../../common/instructions/00-setup-cosmos-db.md) para crear una cuenta de Azure Cosmos DB for NoSQL que usarás en todos los módulos de laboratorio y concede a tu identidad de usuario acceso para administrar los datos de la cuenta mediante la asignación al rol **Colaborador de datos integrado de Cosmos DB**.
+Si ya has creado una cuenta de Azure Cosmos DB for NoSQL para los laboratorios de **Compilación de copilotos de Azure Cosmos DB** en este sitio, puedes usarla para este laboratorio y pasar a la [sección siguiente](#create-azure-cosmos-db-database-and-container-with-sample-data). De lo contrario, consulta las instrucciones de [Configuración de Azure Cosmos DB](../../common/instructions/00-setup-cosmos-db.md) para crear una cuenta de Azure Cosmos DB for NoSQL que usarás en todos los módulos de laboratorio y concede a tu identidad de usuario acceso para administrar los datos de la cuenta mediante la asignación al rol **Colaborador de datos integrado de Cosmos DB**.
 
 ## Creación de un contenedor y una base de datos de Azure Cosmos DB con datos de ejemplo
 

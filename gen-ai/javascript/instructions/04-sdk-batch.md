@@ -1,11 +1,7 @@
 ---
-title: "04: Procesamiento por lotes de varias operaciones de punto junto con el SDK de Azure\_Cosmos\_DB for NoSQL"
 lab:
   title: "04: Procesamiento por lotes de varias operaciones de punto junto con el SDK de Azure\_Cosmos\_DB for NoSQL"
   module: Perform cross-document transactional operations with the Azure Cosmos DB for NoSQL
-layout: default
-nav_order: 7
-parent: JavaScript SDK labs
 ---
 
 # Procesamiento por lotes de varias operaciones de punto junto con el SDK de Azure Cosmos DB for NoSQL
@@ -20,7 +16,7 @@ Si aún no has clonado el repositorio de código del laboratorio de **Compilaci�
 
 ## Creación de una cuenta de Azure Cosmos DB for NoSQL
 
-Si ya creaste una cuenta de Azure Cosmos DB for NoSQL para los laboratorios de **Compilación de copilotos con Azure Cosmos DB** de este sitio, puedes usarla para este laboratorio y pasar a la [siguiente sección](#import-the-azurecosmos-library). De lo contrario, consulta las instrucciones de [Configuración de Azure Cosmos DB](../../common/instructions/00-setup-cosmos-db.md) para crear una cuenta de Azure Cosmos DB for NoSQL que usarás en todos los módulos de laboratorio y concede a tu identidad de usuario acceso para administrar los datos de la cuenta mediante la asignación al rol **Colaborador de datos integrado de Cosmos DB**.
+Si ya has creado una cuenta de Azure Cosmos DB for NoSQL para los laboratorios de **Compilación de copilotos de Azure Cosmos DB** en este sitio, puedes usarla para este laboratorio y pasar a la [sección siguiente](#import-the-azurecosmos-library). De lo contrario, consulta las instrucciones de [Configuración de Azure Cosmos DB](../../common/instructions/00-setup-cosmos-db.md) para crear una cuenta de Azure Cosmos DB for NoSQL que usarás en todos los módulos de laboratorio y concede a tu identidad de usuario acceso para administrar los datos de la cuenta mediante la asignación al rol **Colaborador de datos integrado de Cosmos DB**.
 
 ## Importa la biblioteca @azure/cosmos
 

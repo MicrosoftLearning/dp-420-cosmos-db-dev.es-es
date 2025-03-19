@@ -1,11 +1,7 @@
 ---
-title: "07.1: Habilitación del vector de búsqueda para Azure Cosmos\_DB for NoSQL"
 lab:
   title: "07.1: Habilitación del vector de búsqueda para Azure Cosmos\_DB for NoSQL"
   module: Build copilots with Python and Azure Cosmos DB for NoSQL
-layout: default
-nav_order: 10
-parent: Python SDK labs
 ---
 
 # Habilitación del vector de búsqueda de Azure Cosmos DB for NoSQL

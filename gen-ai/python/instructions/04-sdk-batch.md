@@ -1,11 +1,7 @@
 ---
-title: "04: Procesamiento por lotes de varias operaciones de punto junto con el SDK de Azure\_Cosmos\_DB for NoSQL"
 lab:
   title: "04: Procesamiento por lotes de varias operaciones de punto junto con el SDK de Azure\_Cosmos\_DB for NoSQL"
   module: Perform cross-document transactional operations with the Azure Cosmos DB for NoSQL
-layout: default
-nav_order: 7
-parent: Python SDK labs
 ---
 
 # Procesamiento por lotes de varias operaciones de punto junto con el SDK de Azure Cosmos DB for NoSQL
@@ -20,7 +16,7 @@ Si aún no has clonado el repositorio de código del laboratorio de **Compilaci�
 
 ## Creación de una cuenta de Azure Cosmos DB for NoSQL
 
-Si ya has creado una cuenta de Azure Cosmos DB for NoSQL para los laboratorios de **Compilación de copilotos con Azure Cosmos DB** en este sitio, puedes usarla para este laboratorio y pasar a la [sección siguiente](#install-the-azure-cosmos-library). De lo contrario, consulta las instrucciones de [Configuración de Azure Cosmos DB](../../common/instructions/00-setup-cosmos-db.md) para crear una cuenta de Azure Cosmos DB for NoSQL que usarás en todos los módulos de laboratorio y concede a tu identidad de usuario acceso para administrar los datos de la cuenta mediante la asignación al rol **Colaborador de datos integrado de Cosmos DB**.
+Si ya has creado una cuenta de Azure Cosmos DB for NoSQL para los laboratorios de **Compilación de copilotos de Azure Cosmos DB** en este sitio, puedes usarla para este laboratorio y pasar a la [sección siguiente](#install-the-azure-cosmos-library). De lo contrario, consulta las instrucciones de [Configuración de Azure Cosmos DB](../../common/instructions/00-setup-cosmos-db.md) para crear una cuenta de Azure Cosmos DB for NoSQL que usarás en todos los módulos de laboratorio y concede a tu identidad de usuario acceso para administrar los datos de la cuenta mediante la asignación al rol **Colaborador de datos integrado de Cosmos DB**.
 
 ## Instalación de la biblioteca azure-cosmos
 
@@ -51,7 +47,7 @@ La biblioteca **azure-cosmos** está disponible en **PyPI** para facilitar la in
    pip install asyncio
    ```
 
-1. La versión asincrónica del SDK también requiere la biblioteca `aiohttp`. Instálalo con el comando siguiente:
+1. La versión asincrónica del SDK también requiere la biblioteca `aiohttp`. Instálala con el comando siguiente:
 
    ```bash
    pip install aiohttp
