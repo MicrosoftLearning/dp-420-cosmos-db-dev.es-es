@@ -1,11 +1,7 @@
 ---
-title: "Configuración de Azure\_Cosmos\_DB"
 lab:
   title: "Configuración de Azure\_Cosmos\_DB"
   module: Setup
-layout: default
-nav_order: 3
-parent: Common setup instructions
 ---
 
 # Configuración de Azure Cosmos DB
@@ -24,7 +20,7 @@ Azure Cosmos DB es un servicio de base de datos NoSQL basado en la nube que admi
 
     | **Configuración** | **Valor** |
     | ---: | :--- |
-    | **Suscripción** | *Su suscripción a Azure existente* |
+    | **Suscripción** | *Tu suscripción a Azure existente* |
     | **Grupo de recursos** | *Selecciona un grupo de recursos ya existente o crea un nuevo* |
     | **Nombre de cuenta** | *Escribe un nombre único global*. |
     | **Ubicación** | *Selecciona cualquier región disponible* |

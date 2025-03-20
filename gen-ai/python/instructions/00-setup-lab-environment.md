@@ -1,11 +1,5 @@
 ---
-title: Configuración del entorno de laboratorio
-lab:
-  title: Configuración del entorno de laboratorio
-  module: Setup
-layout: default
-nav_order: 2
-parent: Python SDK labs
+laboratorio: título: "Configuración del entorno del laboratorio" módulo: "Configuración"
 ---
 
 # Configuración del entorno de laboratorio local

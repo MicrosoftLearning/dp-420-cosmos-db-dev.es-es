@@ -1,11 +1,7 @@
 ---
-title: 02 - Configuración del SDK de JavaScript de Azure Cosmos DB para el desarrollo sin conexión
 lab:
   title: 02 - Configuración del SDK de JavaScript de Azure Cosmos DB para el desarrollo sin conexión
   module: Configure the Azure Cosmos DB for NoSQL SDK
-layout: default
-nav_order: 5
-parent: JavaScript SDK labs
 ---
 
 # Configuración del SDK de JavaScript de Azure Cosmos DB para el desarrollo sin conexión
@@ -18,13 +14,13 @@ En este laboratorio, te conectarás al emulador Azure Cosmos DB desde el SDK de 
 
 Si aún no has clonado el repositorio de código del laboratorio para **Compilación de copilotos con Azure Cosmos DB** y configurado el entorno local, consulta las instrucciones de [Configuración del entorno de laboratorio local](00-setup-lab-environment.md) para hacerlo.
 
-## Iniciar el emulador de Azure Cosmos DB
+## Inicio del emulador de Azure Cosmos DB
 
-Si usas un entorno de laboratorio hospedado, ya deberías tener instalado el emulador. Si no es así, consulte las [instrucciones de instalación](https://docs.microsoft.com/azure/cosmos-db/local-emulator) para instalar el emulador de Azure Cosmos DB. Una vez que el emulador se haya iniciado, puedes recuperar la cadena de conexión y utilizarla para conectarte al emulador mediante el SDK de Azure para JavaScript.
+Si usas un entorno de laboratorio hospedado, ya deberías tener instalado el emulador. Si no es así, consulta las [instrucciones de instalación](https://docs.microsoft.com/azure/cosmos-db/local-emulator) para instalar el emulador de Azure Cosmos DB. Una vez que el emulador se haya iniciado, puedes recuperar la cadena de conexión y utilizarla para conectarte al emulador mediante el SDK de Azure para JavaScript.
 
 > &#128161; Opcionalmente, puedes instalar el [nuevo emulador de Azure Cosmos DB basado en Linux (en versión preliminar)](https://learn.microsoft.com/azure/cosmos-db/emulator-linux), que está disponible como contenedor Docker. Admite la ejecución en una amplia variedad de procesadores y sistemas operativos.
 
-1. Inicie el **emulador de Azure Cosmos DB**.
+1. Inicia el **emulador de Azure Cosmos DB**.
 
     > 💡 Si usas Windows, el emulador de Azure Cosmos DB está anclado tanto a la barra de tareas de Windows como al menú Inicio. Si el emulador no se inicia desde los iconos anclados, intenta abrirlo haciendo doble clic en el archivo **C:\Program Files\Azure Cosmos DB Emulator\CosmosDB.Emulator.exe**.
 
@@ -50,7 +46,7 @@ La biblioteca **@azure/cosmos** está disponible en **npm** para facilitar su in
     npm init -y
     ```
 
-1. Instale el paquete [@azure/cosmos][npmjs.com/package/@azure/cosmos] ejecutando el siguiente comando:
+1. Instala el paquete [@azure/cosmos][npmjs.com/package/@azure/cosmos] ejecutando el siguiente comando:
 
     ```bash
     npm install @azure/cosmos
@@ -89,17 +85,17 @@ La biblioteca **@azure/cosmos** está disponible en **npm** para facilitar su in
 
 1. **Guarda** el archivo **script.js**.
 
-## Ejecute el script.
+## Ejecuta el script.
 
 1. Usa la misma ventana de terminal en **Visual Studio Code** que usaste para instalar la biblioteca para este laboratorio. Si lo cierras, abre el menú contextual de la carpeta **javascript/02-sdk-offline** y selecciona **Open in Integrated Terminal** para abrir una nueva instancia de terminal.
 
-1. Ejecute el script mediante el comando `node`:
+1. Ejecuta el script mediante el comando `node`:
 
     ```bash
     node script.js
     ```
 
-1. El script crea una base de datos denominada `cosmicworks` en el emulador. Debería ver un resultado similar al siguiente:
+1. El script crea una base de datos denominada `cosmicworks` en el emulador. Deberías ver un resultado similar al siguiente:
 
     ```text
     New Database: Id: cosmicworks
@@ -184,7 +180,7 @@ main()
     node script.js
     ```
 
-1. El script crea un contenedor denominado `products` en el emulador. Debería ver un resultado similar al siguiente:
+1. El script crea un contenedor denominado `products` en el emulador. Deberías ver un resultado similar al siguiente:
 
     ```text
     New Database: Id: cosmicworks

@@ -12,13 +12,13 @@ En este ejercicio, medirá la diferencia en las entidades de cliente cuando mode
 
 Si aún no ha clonado el repositorio de código de laboratorio para **DP-420** al entorno en el que está trabajando en este laboratorio, siga estos pasos para hacerlo. De lo contrario, abra la carpeta clonada anteriormente en **Visual Studio Code**.
 
-1. Inicie **Visual Studio Code**.
+1. Inicia **Visual Studio Code**.
 
-    > &#128221; Si aún no está familiarizado con la interfaz de Visual Studio Code, revise la [Guía de introducción para Visual Studio Code][code.visualstudio.com/docs/getstarted]
+    > &#128221; Si aún no estás familiarizado con la interfaz de Visual Studio Code, consulta la [Guía de introducción para Visual Studio Code][code.visualstudio.com/docs/getstarted]
 
-1. Abra la paleta de comandos y ejecute **Git: Clonar** para clonar el repositorio de GitHub ``https://github.com/microsoftlearning/dp-420-cosmos-db-dev`` en una carpeta local de su elección.
+1. Abre la paleta de comandos y ejecuta **Git: Clonar** para clonar el repositorio de GitHub ``https://github.com/microsoftlearning/dp-420-cosmos-db-dev`` en una carpeta local de tu elección.
 
-    > &#128161; Puede usar el método abreviado de teclado **CTRL+MAYÚS+P** para abrir la paleta de comandos.
+    > &#128161; Puedes usar el método abreviado de teclado **CTRL+MAYÚS+P** para abrir la paleta de comandos.
 
 1. Una vez clonado el repositorio, abra la carpeta local que seleccionó en **Visual Studio Code**.
 
@@ -39,6 +39,8 @@ Si aún no ha clonado el repositorio de código de laboratorio para **DP-420** a
 
     ```
     > &#128161; Si ejecutó primero el laboratorio **Costo de los datos de desnormalización** y no quitó los recursos de Azure creados por ese laboratorio, cierre el terminal integrado, omita el paso siguiente y vaya a la sección siguiente. Tenga en cuenta que si ya tiene los recursos creados por el laboratorio **Costo de los datos de desnormalización** e intenta ejecutar el script siguiente, se producirá un error en el script.
+
+    > &#128221; Si usas el nivel Gratis de Cosmos DB para este laboratorio, deberás actualizar el archivo ***azuredeploy.json*** y cambiar el rendimiento de 4000 a 1000 para todas las bases de datos y contenedores.
 
 1. En el **terminal Git Bash**, ejecute estos comandos. Los comandos ejecutan un script que crea una cuenta de Azure Cosmos DB y luego compilan e inician la aplicación que usa para rellenar la base de datos y completar los ejercicios. *Una vez que haya escrito la credencial proporcionada para la cuenta de Azure, la compilación puede tardar entre 15 y 20 minutos en completarse, por lo que puede ser un buen momento para tomar un café o té*.
 
