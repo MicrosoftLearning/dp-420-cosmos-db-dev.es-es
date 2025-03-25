@@ -1,16 +1,12 @@
 ---
-title: Configuración del entorno de laboratorio
 lab:
   title: Configuración del entorno de laboratorio
   module: Setup
-layout: default
-nav_order: 2
-parent: JavaScript SDK labs
 ---
 
 # Configuración del entorno de laboratorio local
 
-Lo ideal es completar estos laboratorios en un entorno de laboratorio hospedado. Si deseas completarlos en tu propio equipo, puedes hacerlo instalando el software siguiente. Puedes observar diálogos y comportamientos inesperados al usar tu propio entorno. Debido a la amplia variedad de configuraciones locales posibles, el equipo del curso no puede cubrir problemas que puedan surgir en tu propio entorno.
+Lo ideal es completar estos laboratorios en un entorno de laboratorio hospedado. Si deseas completarlos en tu propio equipo, puedes hacerlo instalando el software siguiente. Puedes experimentar diálogos y comportamientos inesperados al usar tu propio entorno. Debido a la amplia variedad de configuraciones locales posibles, el equipo del curso no puede cubrir problemas que puedan surgir en tu propio entorno.
 
 ## Herramientas de línea de comandos de Azure
 
