@@ -30,6 +30,7 @@ Empecemos de forma sencilla creando una cuenta sin servidor. No hay mucho que co
 
     | **Configuración** | **Valor** |
     | --: | :-- |
+    | **Tipo de carga de trabajo** | **Aprendizaje** |
     | **Suscripción** | **Use la suscripción de Azure existente.** *Todos los recursos deben pertenecer a un grupo de recursos. Cada grupo de recursos debe pertenecer a una suscripción.* |
     | **Grupo de recursos** | **Use un grupo de recursos existente o cree uno nuevo.** *Todos los recursos deben pertenecer a un grupo de recursos.*|
     | **Account Name** |  **Escriba un nombre único global.** *Nombre de cuenta único global. Este nombre se usará como parte de la dirección DNS para las solicitudes.  El portal comprobará el nombre en tiempo real.* |
@@ -64,7 +65,7 @@ Empecemos de forma sencilla creando una cuenta sin servidor. No hay mucho que co
     | --: | :-- |
     | **Id. de base de datos** | *Usar existente* &vert; *cosmicworks* |
     | **Id. de contenedor** | *`products`* |
-    | **Clave de partición** | *`/categoryId`* |
+    | **Clave de partición** | *`/category/name`* |
 
 1. De nuevo en el panel **Data Explorer**, expanda el nodo de base de datos **cosmicworks** y observe el nodo contenedor **products** dentro de la jerarquía.
 
@@ -86,6 +87,7 @@ Ahora vamos a crear una cuenta de rendimiento aprovisionada con opciones de conf
 
     | **Configuración** | **Valor** |
     | --: | :-- |
+    | **Tipo de carga de trabajo** | **Aprendizaje** |
     | **Suscripción** | **Use la suscripción de Azure existente.** *Todos los recursos deben pertenecer a un grupo de recursos. Cada grupo de recursos debe pertenecer a una suscripción.* |
     | **Grupo de recursos** | **Use un grupo de recursos existente o cree uno nuevo.** *Todos los recursos deben pertenecer a un grupo de recursos.*|
     | **Account Name** |  **Escriba un nombre único global.** *Nombre de cuenta único global. Este nombre se usará como parte de la dirección DNS para las solicitudes.  El portal comprobará el nombre en tiempo real.* |

@@ -6,7 +6,7 @@ lab:
 
 # Configuración del entorno de laboratorio local
 
-Lo ideal es completar estos laboratorios en un entorno de laboratorio hospedado. Si desea completarlos en su propio equipo, puede hacerlo instalando el software siguiente. Puede experimentar diálogos y comportamientos inesperados al usar su propio entorno. Debido a la amplia variedad de configuraciones locales posibles, el equipo del curso no puede cubrir problemas que puedan surgir en su propio entorno.
+Lo ideal es completar estos laboratorios en un entorno de laboratorio hospedado. Si deseas completarlos en tu propio equipo, puedes hacerlo instalando el software siguiente. Puedes experimentar diálogos y comportamientos inesperados al usar tu propio entorno. Debido a la amplia variedad de configuraciones locales posibles, el equipo del curso no puede cubrir problemas que puedan surgir en su propio entorno.
 
 ## Instalación en el equipo Windows
 
@@ -22,9 +22,9 @@ Lo ideal es completar estos laboratorios en un entorno de laboratorio hospedado.
 
 1. Instale la versión más reciente de Microsoft Edge desde [microsoft.com/edge].
 
-### SDK de .NET 6
+### SDK DE .NET 8
 
-1. Descargue e instale el SDK (no en runtime) desde [dotnet.microsoft.com/download/dotnet/6.0].
+1. Descarga e instala el SDK (no en runtime) desde [dotnet.microsoft.com/download/dotnet/8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0).
 
 ### PowerShell 7
 
@@ -32,7 +32,7 @@ Lo ideal es completar estos laboratorios en un entorno de laboratorio hospedado.
 
 ### Git
 
-1. Descargue e instale desde [git-scm.com/downloads].
+1. Descarga e instala desde [git-scm.com/downloads].
 
     - Use las opciones predeterminadas del instalador.
 
@@ -44,11 +44,11 @@ Lo ideal es completar estos laboratorios en un entorno de laboratorio hospedado.
 
 ### Visual Studio Code (y extensiones)
 
-1. Descargue e instale desde [code.visualstudio.com/download].
+1. Descarga e instala desde [code.visualstudio.com/download].
 
-    - Use las opciones predeterminadas del instalador.
+    - Usa las opciones predeterminadas del instalador.
 
-1. Después de la instalación, inicie Visual Studio Code.
+1. Después de la instalación, inicia Visual Studio Code.
 
 1. En el menú **Extensiones**, busque e instale las siguientes extensiones de Microsoft:
 
@@ -56,7 +56,7 @@ Lo ideal es completar estos laboratorios en un entorno de laboratorio hospedado.
 
 ### Emulador de Azure Cosmos DB
 
-1. Descargue e instale desde [docs.microsoft.com/azure/cosmos-db/local-emulator].
+1. Descarga e instala desde [docs.microsoft.com/azure/cosmos-db/local-emulator].
     - Use las opciones predeterminadas del instalador.
 
 [code.visualstudio.com/download]: https://code.visualstudio.com/download

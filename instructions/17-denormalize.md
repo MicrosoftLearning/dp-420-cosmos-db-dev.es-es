@@ -37,7 +37,7 @@ Si aún no ha clonado el repositorio de código de laboratorio para **DP-420** a
     ```
     "C:\Program Files (x86)\Microsoft SDKs\Azure\CLI2\python.exe" -m pip install pip-system-certs
     az login
-    dotnet add package Microsoft.Azure.Cosmos --version 3.22.1
+    dotnet add package Microsoft.Azure.Cosmos --version 3.49.0
     ```
 
     > &#128161; Si ejecutó primero el laboratorio **Medir el rendimiento de las entidades del cliente** y no quitó los recursos de Azure creados por dicho laboratorio, cierre el terminal integrado, omita el paso siguiente y vaya a la próxima sección. Tenga en cuenta que si ya tiene los recursos creados por el laboratorio **Medir el rendimiento de las entidades del cliente** e intenta ejecutar el script siguiente, no lo conseguirá.

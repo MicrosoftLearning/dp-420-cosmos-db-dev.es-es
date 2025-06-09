@@ -16,20 +16,21 @@ Los procedimientos almacenados se crean en JavaScript integrado en lenguaje y ad
 
 1. Vaya a Azure Portal (``portal.azure.com``) desde una nueva ventana o pestaña del explorador web.
 
-1. Inicie sesión en el portal con las credenciales de Microsoft asociadas a su suscripción.
+1. Inicia sesión en el portal con las credenciales de Microsoft asociadas a tu suscripción.
 
-1. Seleccione **+ Crear un recurso**, busque *Cosmos DB* y, a continuación, cree un nuevo recurso de cuenta de **Azure Cosmos DB for NoSQL** con la siguiente configuración, dejando todas las opciones restantes en sus valores predeterminados:
+1. Selecciona **+ Crear un recurso**, busca *Cosmos DB* y, a continuación, crea un nuevo recurso de cuenta de **Azure Cosmos DB for NoSQL** con la siguiente configuración, dejando todas las opciones restantes en sus valores predeterminados:
 
     | **Configuración** | **Valor** |
     | ---: | :--- |
-    | **Suscripción** | *Su suscripción de Azure existente* |
-    | **Grupo de recursos** | *Seleccione un grupo de recursos ya existente o cree un nuevo* |
-    | **Account Name** | *Escriba un nombre único global*. |
-    | **Ubicación** | *seleccione cualquier región disponible* |
+    | **Tipo de carga de trabajo** | **Aprendizaje** |
+    | **Suscripción** | *Tu suscripción a Azure existente* |
+    | **Grupo de recursos** | *Selecciona un grupo de recursos ya existente o crea un nuevo* |
+    | **Nombre de cuenta** | *Escribe un nombre único global*. |
+    | **Ubicación** | *Selecciona cualquier región disponible* |
     | **Capacity mode (Modo de capacidad)** | *Rendimiento aprovisionado* |
     | **Aplicación de descuento por nivel Gratis** | *No aplicar* |
 
-    > &#128221; Es posible que los entornos de laboratorio tengan restricciones que le impidan crear un nuevo grupo de recursos. Si es así, use el grupo de recursos existente creado previamente.
+    > &#128221; Es posible que los entornos de laboratorio tengan restricciones que te impidan crear un nuevo grupo de recursos. Si es así, usa el grupo de recursos existente creado previamente.
 
 1. Espere a que se complete la tarea de implementación antes de continuar con esta tarea.
 
