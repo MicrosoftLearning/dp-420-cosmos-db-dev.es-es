@@ -20,7 +20,7 @@ Si aún no ha clonado el repositorio de código de laboratorio para **DP-420** a
 
 1. Abra la paleta de comandos y ejecute **Git: Clonar** para clonar el repositorio de GitHub ``https://github.com/microsoftlearning/dp-420-cosmos-db-dev`` en una carpeta local de su elección.
 
-    > &#128161; Puede usar el método abreviado de teclado **CTRL+MAYÚS+P** para abrir la paleta de comandos.
+    > &#128161; Puedes usar el método abreviado de teclado **CTRL+MAYÚS+P** para abrir la paleta de comandos.
 
 1. Una vez clonado el repositorio, abra la carpeta local que seleccionó en **Visual Studio Code**.
 
@@ -101,7 +101,7 @@ La biblioteca de **Microsoft.Azure.Cosmos** ya se ha instalado previamente en el
 1. Agregue el paquete [Microsoft.Azure.Cosmos][nuget.org/packages/microsoft.azure.cosmos/3.22.1] desde NuGet mediante el comando siguiente:
 
     ```
-    dotnet add package Microsoft.Azure.Cosmos --version 3.22.1
+    dotnet add package Microsoft.Azure.Cosmos --version 3.49.0
     ```
 
 1. Compile y ejecute el proyecto mediante el comando [dotnet run][docs.microsoft.com/dotnet/core/tools/dotnet-run]:
@@ -132,10 +132,10 @@ La creación de un contenedor es similar al patrón usado para crear una nueva b
 
 1. Abra de nuevo el archivo de código **script.cs** dentro de la carpeta **05-sdk-offline**.
 
-1. Invoque de forma asincrónica el método [CreateContainerIfNotExistsAsync][docs.microsoft.com/dotnet/api/microsoft.azure.cosmos.database.createcontainerifnotexistsasync] de la **base de datos** que pasa el nombre del nuevo contenedor (**productos**), la partición ruta de acceso de clave (**/categoryId**) y el rendimiento (**400**) que le gustaría crear en la base de datos de **cosmosworks** y almacenar el da como resultado una variable de tipo [Container][docs.microsoft.com/dotnet/api/microsoft.azure.cosmos.container]:
+1. Invoca de forma asincrónica el método [CreateContainerIfNotExistsAsync][docs.microsoft.com/dotnet/api/microsoft.azure.cosmos.database.createcontainerifnotexistsasync] de la variable de **base de datos** que pasa el nombre del nuevo contenedor (**products**), la ruta de acceso de la clave de partición (**/category/name**) y el rendimiento (**400**) que te gustaría crear en la base de datos **cosmicworks** y almacena el resultado en una variable de tipo [Container][docs.microsoft.com/dotnet/api/microsoft.azure.cosmos.container]:
 
     ```
-    Container container = await database.CreateContainerIfNotExistsAsync("products", "/categoryId", 400);
+    Container container = await database.CreateContainerIfNotExistsAsync("products", "/category/name", 400);
     ```
 
 1. Use el método estático **Console.WriteLine** integrado para imprimir la propiedad [Id][docs.microsoft.com/dotnet/api/microsoft.azure.cosmos.container.id] de la clase Container con un encabezado titulado **New Container**:
@@ -157,7 +157,7 @@ La creación de un contenedor es similar al patrón usado para crear una nueva b
     Database database = await client.CreateDatabaseIfNotExistsAsync("cosmicworks");
     Console.WriteLine($"New Database:\tId: {database.Id}");
     
-    Container container = await database.CreateContainerIfNotExistsAsync("products", "/categoryId", 400);
+    Container container = await database.CreateContainerIfNotExistsAsync("products", "/category/name", 400);
     Console.WriteLine($"New Container:\tId: {container.Id}");
     ```
 

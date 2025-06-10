@@ -20,7 +20,7 @@ Si aún no ha clonado el repositorio de código de laboratorio para **DP-420** a
 
 1. Abra la paleta de comandos y ejecute **Git: Clonar** para clonar el repositorio de GitHub ``https://github.com/microsoftlearning/dp-420-cosmos-db-dev`` en una carpeta local de su elección.
 
-    > &#128161; Puede usar el método abreviado de teclado **CTRL+MAYÚS+P** para abrir la paleta de comandos.
+    > &#128161; Puedes usar el método abreviado de teclado **CTRL+MAYÚS+P** para abrir la paleta de comandos.
 
 1. Una vez clonado el repositorio, abra la carpeta local que seleccionó en **Visual Studio Code**.
 
@@ -28,26 +28,27 @@ Si aún no ha clonado el repositorio de código de laboratorio para **DP-420** a
 
 1. Vaya a Azure Portal (``portal.azure.com``) desde una nueva ventana o pestaña del explorador web.
 
-1. Inicie sesión en el portal con las credenciales de Microsoft asociadas a su suscripción.
+1. Inicia sesión en el portal con las credenciales de Microsoft asociadas a tu suscripción.
 
-1. Seleccione **+ Crear un recurso**, busque *Cosmos DB* y, a continuación, cree un nuevo recurso de cuenta de **Azure Cosmos DB for NoSQL** con la siguiente configuración, dejando todas las opciones restantes en sus valores predeterminados:
+1. Selecciona **+ Crear un recurso**, busca *Cosmos DB* y, a continuación, crea un nuevo recurso de cuenta de **Azure Cosmos DB for NoSQL** con la siguiente configuración, dejando todas las opciones restantes en sus valores predeterminados:
 
     | **Configuración** | **Valor** |
     | ---: | :--- |
-    | **Suscripción** | *Su suscripción de Azure existente* |
-    | **Grupo de recursos** | *Seleccione un grupo de recursos ya existente o cree un nuevo* |
-    | **Account Name** | *Escriba un nombre único global*. |
-    | **Ubicación** | *seleccione cualquier región disponible* |
+    | **Tipo de carga de trabajo** | **Aprendizaje** |
+    | **Suscripción** | *Tu suscripción a Azure existente* |
+    | **Grupo de recursos** | *Selecciona un grupo de recursos ya existente o crea un nuevo* |
+    | **Nombre de cuenta** | *Escribe un nombre único global*. |
+    | **Ubicación** | *Selecciona cualquier región disponible* |
     | **Capacity mode (Modo de capacidad)** | *Rendimiento aprovisionado* |
     | **Aplicación de descuento por nivel Gratis** | *No aplicar* |
 
-    > &#128221; Es posible que los entornos de laboratorio tengan restricciones que le impidan crear un nuevo grupo de recursos. Si es así, use el grupo de recursos existente creado previamente.
+    > &#128221; Es posible que los entornos de laboratorio tengan restricciones que te impidan crear un nuevo grupo de recursos. Si es así, usa el grupo de recursos existente creado previamente.
 
-1. Espere a que se complete la tarea de implementación antes de continuar con esta tarea.
+1. Espera a que se complete la tarea de implementación antes de continuar con esta tarea.
 
-1. Vaya al recurso de cuenta de **Azure Cosmos DB** recién creado y vaya al panel **Claves**.
+1. Ve al recurso de cuenta de **Azure Cosmos DB** recién creado y, después, ve al panel **Claves**.
 
-1. Este panel contiene los detalles de conexión y las credenciales necesarias para conectarse a la cuenta desde el SDK. Específicamente:
+1. Este panel contiene los detalles de conexión y las credenciales necesarias para conectarte a la cuenta desde el SDK. Específicamente:
 
     1. Observe el campo **URI**. Usará este valor de **endpoint** más adelante en este ejercicio.
 
@@ -86,7 +87,7 @@ Si aún no ha clonado el repositorio de código de laboratorio para **DP-420** a
 1. Agregue el paquete [Microsoft.Azure.Cosmos][nuget.org/packages/microsoft.azure.cosmos/3.22.1] desde NuGet mediante el comando siguiente:
 
     ```
-    dotnet add package Microsoft.Azure.Cosmos --version 3.22.1
+    dotnet add package Microsoft.Azure.Cosmos --version 3.49.0
     ```
 
 1. Compile el proyecto con el comando [dotnet build][docs.microsoft.com/dotnet/core/tools/dotnet-build]:
@@ -286,7 +287,7 @@ Ahora, vamos a crear un lote transaccional que producirá un error a propósito.
 
 1. Cierre el terminal integrado.
 
-1. Cierre **Visual Studio Code**.
+1. Cierra **Visual Studio Code**.
 
 [code.visualstudio.com/docs/getstarted]: https://code.visualstudio.com/docs/getstarted/tips-and-tricks
 [docs.microsoft.com/dotnet/api/microsoft.azure.cosmos.container.createtransactionalbatch]: https://docs.microsoft.com/dotnet/api/microsoft.azure.cosmos.container.createtransactionalbatch

@@ -20,7 +20,7 @@ Si aún no ha clonado el repositorio de código de laboratorio para **DP-420** a
 
 1. Abra la paleta de comandos y ejecute **Git: Clonar** para clonar el repositorio de GitHub ``https://github.com/microsoftlearning/dp-420-cosmos-db-dev`` en una carpeta local de su elección.
 
-    > &#128161; Puede usar el método abreviado de teclado **CTRL+MAYÚS+P** para abrir la paleta de comandos.
+    > &#128161; Puedes usar el método abreviado de teclado **CTRL+MAYÚS+P** para abrir la paleta de comandos.
 
 1. Una vez clonado el repositorio, abra la carpeta local que seleccionó en **Visual Studio Code**.
 
@@ -30,26 +30,27 @@ Azure Cosmos DB es un servicio de base de datos NoSQL basado en la nube que admi
 
 1. Vaya a Azure Portal (``portal.azure.com``) desde una nueva ventana o pestaña del explorador web.
 
-1. Inicie sesión en el portal con las credenciales de Microsoft asociadas a su suscripción.
+1. Inicia sesión en el portal con las credenciales de Microsoft asociadas a tu suscripción.
 
-1. Seleccione **+ Crear un recurso**, busque *Cosmos DB* y, a continuación, cree un nuevo recurso de cuenta de **Azure Cosmos DB for NoSQL** con la siguiente configuración, dejando todas las opciones restantes en sus valores predeterminados:
+1. Selecciona **+ Crear un recurso**, busca *Cosmos DB* y, a continuación, crea un nuevo recurso de cuenta de **Azure Cosmos DB for NoSQL** con la siguiente configuración, dejando todas las opciones restantes en sus valores predeterminados:
 
     | **Configuración** | **Valor** |
     | ---: | :--- |
-    | **Suscripción** | *Su suscripción de Azure existente* |
-    | **Grupo de recursos** | *Seleccione un grupo de recursos ya existente o cree un nuevo* |
-    | **Account Name** | *Escriba un nombre único global*. |
-    | **Ubicación** | *seleccione cualquier región disponible* |
+    | **Tipo de carga de trabajo** | **Aprendizaje** |
+    | **Suscripción** | *Tu suscripción a Azure existente* |
+    | **Grupo de recursos** | *Selecciona un grupo de recursos ya existente o crea un nuevo* |
+    | **Nombre de cuenta** | *Escribe un nombre único global*. |
+    | **Ubicación** | *Selecciona cualquier región disponible* |
     | **Capacity mode (Modo de capacidad)** | *Rendimiento aprovisionado* |
     | **Aplicación de descuento por nivel Gratis** | *No aplicar* |
 
-    > &#128221; Es posible que los entornos de laboratorio tengan restricciones que le impidan crear un nuevo grupo de recursos. Si es así, use el grupo de recursos existente creado previamente.
+    > &#128221; Es posible que los entornos de laboratorio tengan restricciones que te impidan crear un nuevo grupo de recursos. Si es así, usa el grupo de recursos existente creado previamente.
 
-1. Espere a que se complete la tarea de implementación antes de continuar con esta tarea.
+1. Espera a que se complete la tarea de implementación antes de continuar con esta tarea.
 
-1. Vaya al recurso de cuenta de **Azure Cosmos DB** recién creado y vaya al panel **Claves**.
+1. Ve al recurso de cuenta de **Azure Cosmos DB** recién creado y, después, ve al panel **Claves**.
 
-1. Este panel contiene los detalles de conexión y las credenciales necesarias para conectarse a la cuenta desde el SDK. Específicamente:
+1. Este panel contiene los detalles de conexión y las credenciales necesarias para conectarte a la cuenta desde el SDK. Específicamente:
 
     1. Observe el campo **URI**. Usará este valor de **endpoint** más adelante en este ejercicio.
 
@@ -70,7 +71,7 @@ Con las credenciales de la cuenta recién creada, se conectará con las clases d
 1. Agregue el paquete [Microsoft.Azure.Cosmos][nuget.org/packages/microsoft.azure.cosmos/3.22.1] desde NuGet mediante el comando siguiente:
 
     ```
-    dotnet add package Microsoft.Azure.Cosmos --version 3.22.1
+    dotnet add package Microsoft.Azure.Cosmos --version 3.49.0
     ```
 
 1. Compile el proyecto con el comando [dotnet build][docs.microsoft.com/dotnet/core/tools/dotnet-build]:
@@ -143,9 +144,9 @@ Con las credenciales de la cuenta recién creada, se conectará con las clases d
 
 1. Cambie a la ventana del explorador web.
 
-1. En el recurso de cuenta de **Azure Cosmos DB**, vaya al panel del **Explorador de datos**.
+1. En el recurso de cuenta de **Azure Cosmos DB**, ve al panel de **Data Explorer**.
 
-1. En **Data Explorer**, expanda el nodo de la base de datos **cosmicworks** y, a continuación, observe el nodo contenedor **products** nuevo dentro del árbol de navegación de la **API NOSQL**.
+1. En **Data Explorer**, expande el nodo de la base de datos **cosmicworks** y, a continuación, observa el nodo contenedor **products** nuevo dentro del árbol de navegación de la **API NOSQL**.
 
 ## Realización de operaciones de creación y lectura de puntos en elementos con el SDK
 
@@ -165,9 +166,9 @@ Ahora usará el conjunto de métodos asincrónicos en la clase Microsoft.Azure.C
     | ---: | :--- |
     | **id** | *706cd7c6-db8b-41f9-aea2-0e0c7e8eb009* |
     | **categoryId** | *9603ca6c-9e28-4a02-9194-51cdb7fea816* |
-    | **name** | *Silla de carretera* |
+    | **name** | *Sillín para carretera* |
     | **price** | *45.99d* |
-    | **etiquetas** | *{ tan, new, crisp }* |
+    | **tags** | *{ tan, new, crisp }* |
 
     ```
     Product saddle = new()
@@ -330,20 +331,20 @@ Ahora usará el conjunto de métodos asincrónicos en la clase Microsoft.Azure.C
 
 Al aprender el SDK, no es raro usar una cuenta del SDK de Azure Cosmos DB en línea o el emulador para actualizar un elemento y oscilar entre el Explorador de datos y el IDE que prefiera mientras realiza una operación y comprueba si se ha aplicado el cambio. Aquí, lo hará al actualizar y eliminar un elemento mediante el SDK.
 
-1. Vuelva a la ventana o pestaña del explorador web.
+1. Vuelve a la ventana o pestaña del explorador web.
 
-1. En el recurso de cuenta de **Azure Cosmos DB**, vaya al panel del **Explorador de datos**.
+1. En el recurso de cuenta de **Azure Cosmos DB**, ve al panel de **Data Explorer**.
 
-1. En el **Explorador de datos**, expanda el nodo de la base de datos **cosmicworks** y, a continuación, expanda el nodo contenedor **products** nuevo dentro del árbol de navegación de la **API NOSQL**.
+1. En **Data Explorer**, expande el nodo de la base de datos **cosmicworks** y, a continuación, expande el nodo contenedor **products** nuevo dentro del árbol de navegación de la **API NoSQL**.
 
-1. Seleccione el nodo **Elementos**. Seleccione el único artículo dentro del contenedor y observe los valores de las propiedades **nombre** y **precio** del artículo.
+1. Selecciona el nodo **Items**. Selecciona el único artículo dentro del contenedor y observa los valores de las propiedades **name** y **price** del artículo.
 
     | **Propiedad** | **Valor** |
     | ---: | :--- |
-    | **Nombre** | *Silla de carretera* |
-    | **Precio** | *45,99 $* |
+    | **Name** | *Sillín para carretera* |
+    | **Price** | *$45.99* |
 
-    > &#128221; En este momento, estos valores no deben haberse cambiado desde que creó el elemento. Estos valores se cambiarán en este ejercicio.
+    > &#128221; En este momento, estos valores no deben haberse cambiado desde que creaste el artículo. Estos valores se cambiarán en este ejercicio.
 
 1. Vuelva a **Visual Studio Code**. Vuelva a la pestaña editor del archivo de código **script.cs**.
 
@@ -411,20 +412,20 @@ Al aprender el SDK, no es raro usar una cuenta del SDK de Azure Cosmos DB en lí
 
 1. Cierre el terminal integrado.
 
-1. Vuelva a la ventana o pestaña del explorador web.
+1. Vuelve a la ventana o pestaña del explorador web.
 
-1. En el recurso de cuenta de **Azure Cosmos DB**, vaya al panel del **Explorador de datos**.
+1. En el recurso de cuenta de **Azure Cosmos DB**, ve al panel de **Data Explorer**.
 
-1. En el **Explorador de datos**, expanda el nodo de la base de datos **cosmicworks** y, a continuación, expanda el nodo contenedor **products** nuevo dentro del árbol de navegación de la **API NOSQL**.
+1. En **Data Explorer**, expande el nodo de la base de datos **cosmicworks** y, a continuación, expande el nodo contenedor **products** nuevo dentro del árbol de navegación de la **API NoSQL**.
 
-1. Seleccione el nodo **Elementos**. Seleccione el único artículo dentro del contenedor y observe los valores de las propiedades **nombre** y **precio** del artículo.
+1. Selecciona el nodo **Items**. Selecciona el único artículo dentro del contenedor y observa los valores de las propiedades **name** y **price** del artículo.
 
     | **Propiedad** | **Valor** |
     | ---: | :--- |
-    | **Nombre** | *Silla de carretera LL* |
-    | **Precio** | *32,55 $* |
+    | **Name** | *Road LL Saddle* |
+    | **Price** | *$32.55* |
 
-    > &#128221; En este momento, estos valores deben haberse cambiado desde que ha observado el elemento.
+    > &#128221; En este momento, estos valores deben haberse cambiado desde que has observado el elemento.
 
 1. Vuelva a **Visual Studio Code**. Vuelva a la pestaña editor del archivo de código **script.cs**.
 
@@ -457,17 +458,17 @@ Al aprender el SDK, no es raro usar una cuenta del SDK de Azure Cosmos DB en lí
 
 1. Cierre el terminal integrado.
 
-1. Vuelva a la ventana o pestaña del explorador web.
+1. Vuelve a la ventana o pestaña del explorador web.
 
-1. En el recurso de cuenta de **Azure Cosmos DB**, vaya al panel del **Explorador de datos**.
+1. En el recurso de cuenta de **Azure Cosmos DB**, ve al panel de **Data Explorer**.
 
-1. En el **Explorador de datos**, expanda el nodo de la base de datos **cosmicworks** y, a continuación, expanda el nodo contenedor **products** nuevo dentro del árbol de navegación de la **API NOSQL**.
+1. En **Data Explorer**, expande el nodo de la base de datos **cosmicworks** y, a continuación, expande el nodo contenedor **products** nuevo dentro del árbol de navegación de la **API NoSQL**.
 
-1. Seleccione el nodo **Elementos**. Observe que la lista de elementos ahora está vacía.
+1. Selecciona el nodo **Items**. Observa que la lista de elementos ahora está vacía.
 
-1. Cierre la ventana o pestaña del explorador web.
+1. Cierra la ventana o pestaña del explorador web.
 
-1. Cierre **Visual Studio Code**.
+1. Cierra **Visual Studio Code**.
 
 [code.visualstudio.com/docs/getstarted]: https://code.visualstudio.com/docs/getstarted/tips-and-tricks
 [docs.microsoft.com/dotnet/api/microsoft.azure.cosmos.container]: https://docs.microsoft.com/dotnet/api/microsoft.azure.cosmos.container

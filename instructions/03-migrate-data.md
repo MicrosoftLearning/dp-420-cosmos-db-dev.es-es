@@ -18,31 +18,30 @@ Para acompañar al contenedor products, creará manualmente un contenedor **flat
 
 1. Vaya a Azure Portal (``portal.azure.com``) desde una nueva ventana o pestaña del explorador web.
 
-1. Inicie sesión en el portal con las credenciales de Microsoft asociadas a su suscripción.
+1. Inicia sesión en el portal con las credenciales de Microsoft asociadas a tu suscripción.
 
-1. Seleccione **+ Crear un recurso**, busque *Cosmos DB* y, a continuación, cree un nuevo recurso de cuenta de **Azure Cosmos DB for NoSQL** con la siguiente configuración, dejando todas las opciones restantes en sus valores predeterminados:
+1. Selecciona **+ Crear un recurso**, busca *Cosmos DB* y, a continuación, crea un nuevo recurso de cuenta de **Azure Cosmos DB for NoSQL** con la siguiente configuración, dejando todas las opciones restantes en sus valores predeterminados:
 
     | **Configuración** | **Valor** |
     | ---: | :--- |
-    | **Suscripción** | *Su suscripción de Azure existente* |
-    | **Grupo de recursos** | *Seleccione un grupo de recursos ya existente o cree un nuevo* |
-    | **Account Name** | *Escriba un nombre único global*. |
-    | **Ubicación** | *seleccione cualquier región disponible* |
+    | **Tipo de carga de trabajo** | **Aprendizaje** |
+    | **Suscripción** | *Tu suscripción a Azure existente* |
+    | **Grupo de recursos** | *Selecciona un grupo de recursos ya existente o crea un nuevo* |
+    | **Nombre de cuenta** | *Escribe un nombre único global*. |
+    | **Ubicación** | *Selecciona cualquier región disponible* |
     | **Capacity mode (Modo de capacidad)** | *Rendimiento aprovisionado* |
     | **Aplicación de descuento por nivel Gratis** | *No aplicar* |
     | **Limitar la cantidad total de rendimiento que se puede aprovisionar en esta cuenta** | *Desactivado* |
 
-    > &#128221; Es posible que los entornos de laboratorio tengan restricciones que le impidan crear un nuevo grupo de recursos. Si es así, use el grupo de recursos existente creado previamente.
+    > &#128221; Es posible que los entornos de laboratorio tengan restricciones que le impidan crear un nuevo grupo de recursos. Si es así, usa el grupo de recursos existente creado previamente.
 
-1. Espere a que se complete la tarea de implementación antes de continuar con esta tarea.
+1. Espera a que se complete la tarea de implementación antes de continuar con esta tarea.
 
-1. Vaya al recurso de cuenta de **Azure Cosmos DB** recién creado y vaya al panel **Claves**.
+1. Ve al recurso de cuenta de **Azure Cosmos DB** recién creado y, después, ve al panel **Claves**.
 
-1. Este panel contiene los detalles de conexión y las credenciales necesarias para conectarse a la cuenta desde el SDK. Específicamente:
+1. Este panel contiene los detalles de conexión y las credenciales necesarias para conectarte a la cuenta desde el SDK. Específicamente:
 
-    1. Observe el campo **URI**. Usará este valor de **endpoint** más adelante en este ejercicio.
-
-    1. Observe el campo **PRIMARY KEY**. Usará este valor de **clave** más adelante en este ejercicio.
+    1. Observe el campo **CADENA DE CONEXIÓN PRINCIPAL**. Usará este valor de **cadena de conexión** más adelante en este ejercicio.
 
 1. Mantenga abierta la pestaña del explorador, ya que volveremos a ella más adelante.
 
@@ -54,8 +53,8 @@ Para acompañar al contenedor products, creará manualmente un contenedor **flat
 
 1. Instale la herramienta de línea de comandos [cosmicworks][nuget.org/packages/cosmicworks] para su uso global en la máquina.
 
-    ```
-    dotnet tool install cosmicworks --global --version 1.*
+    ```powershell
+    dotnet tool install --global CosmicWorks --version 2.3.1
     ```
 
     > &#128161; Este comando puede tardar un par de minutos en completarse. Este comando generará el mensaje de advertencia (*Tool "cosmicworks" ya está instalado) si ya ha instalado la versión más reciente de esta herramienta en el pasado.
@@ -64,15 +63,14 @@ Para acompañar al contenedor products, creará manualmente un contenedor **flat
 
     | **Opción** | **Valor** |
     | ---: | :--- |
-    | **--endpoint** | *El valor del punto de conexión que ha comprobado anteriormente en este laboratorio* |
-    | **--key** | *El valor de la clave que ha comprobado anteriormente en este laboratorio* |
-    | **--datasets** | *product* |
+    | **-c** | *El valor de la cadena de conexión que ha comprobado anteriormente en este laboratorio* |
+    | **--number-of-employees** | *El comando cosmicworks rellena la base de datos tanto con empleados como con contenedores de productos con 1000 y 200 elementos, respectivamente, a menos que se especifique lo contrario.* |
 
-    ```
-    cosmicworks --endpoint <cosmos-endpoint> --key <cosmos-key> --datasets product
+    ```powershell
+    cosmicworks -c "connection-string" --number-of-employees 0 --disable-hierarchical-partition-keys
     ```
 
-    > &#128221; Por ejemplo, si el punto de conexión es **https&shy;://dp420.documents.azure.com:443/** y la clave es **fDR2ci9QgkdkvERTQ==**, el comando sería: ``cosmicworks --endpoint https://dp420.documents.azure.com:443/ --key fDR2ci9QgkdkvERTQ== --datasets product``
+    > &#128221; Por ejemplo, si el punto de conexión es **https&shy;://dp420.documents.azure.com:443/** y la clave es **fDR2ci9QgkdkvERTQ==**, el comando sería: ``cosmicworks -c "AccountEndpoint=https://dp420.documents.azure.com:443/;AccountKey=fDR2ci9QgkdkvERTQ==" --number-of-employees 0 --disable-hierarchical-partition-keys``
 
 1. Espere a que el comando **cosmicworks** termine de poblar la cuenta con una base de datos, un contenedor y elementos.
 
@@ -88,7 +86,7 @@ Para acompañar al contenedor products, creará manualmente un contenedor **flat
 
 1. Observe y seleccione los distintos elementos JSON en el contenedor **products**. Estos son los elementos creados por la herramienta de línea de comandos que se usa en los pasos anteriores.
 
-1. Seleccione el nodo **Escala y configuración**. En la pestaña **Escala y configuración**, seleccione **Manual**, actualice el valor de **rendimiento requerido** de **4000 RU/s** a **400 RU/s** y, a continuación, **Guarde** los cambios**.
+1. Selecciona el nodo **Scale**. En la pestaña **Scale**, selecciona **Manual**, actualiza el valor de **rendimiento requerido** de **4000 RU/s** a **400 RU/s** y, a continuación, **Guarda** los cambios**.
 
 1. En el panel **Data Explorer**, seleccione **Nuevo contenedor**.
 
@@ -99,8 +97,6 @@ Para acompañar al contenedor products, creará manualmente un contenedor **flat
     | **Id. de base de datos** | *Usar existente* &vert; *cosmicworks* |
     | **Id. de contenedor** | *`flatproducts`* |
     | **Clave de partición** | *`/category`* |
-    | **Rendimiento del contenedor (escalado automático)** | *Manual* |
-    | **RU/s** | *`400`* |
 
 1. De nuevo en el panel **Data Explorer**, expanda el nodo de base de datos **cosmicworks** y observe el nodo contenedor **flatproducts** dentro de la jerarquía.
 
@@ -114,14 +110,13 @@ Ahora que los recursos de Azure Cosmos DB for NoSQL están en vigor, creará un 
 
     | **Configuración** | **Valor** |
     | ---: | :--- |
-    | **Suscripción** | *Su suscripción de Azure existente* |
+    | **Suscripción** | *Tu suscripción a Azure existente* |
     | **Grupo de recursos** | *Seleccione un grupo de recursos ya existente o cree uno nuevo* |
     | **Nombre** | *Escriba un nombre único global*. |
     | **Región** | *seleccione cualquier región disponible* |
     | **Versión** | *V2* |
-    | **Configuración de Git** | *Configurar Git más tarde* |
 
-    > &#128221; Es posible que los entornos de laboratorio tengan restricciones que le impidan crear un nuevo grupo de recursos. Si es así, use el grupo de recursos existente creado previamente.
+    > &#128221; Es posible que los entornos de laboratorio tengan restricciones que te impidan crear un nuevo grupo de recursos. Si es así, usa el grupo de recursos existente creado previamente.
 
 1. Espere a que se complete la tarea de implementación antes de continuar con esta tarea.
 

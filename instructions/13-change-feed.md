@@ -14,13 +14,13 @@ En este laboratorio, usará la funcionalidad del procesador de fuente de cambios
 
 Si aún no ha clonado el repositorio de código de laboratorio para **DP-420** al entorno en el que está trabajando en este laboratorio, siga estos pasos para hacerlo. De lo contrario, abra la carpeta clonada anteriormente en **Visual Studio Code**.
 
-1. Inicie **Visual Studio Code**.
+1. Inicia **Visual Studio Code**.
 
-    > &#128221; Si aún no está familiarizado con la interfaz de Visual Studio Code, revise la [Guía de introducción para Visual Studio Code][code.visualstudio.com/docs/getstarted]
+    > &#128221; Si aún no estás familiarizado con la interfaz de Visual Studio Code, consulta la [Guía de introducción para Visual Studio Code][code.visualstudio.com/docs/getstarted]
 
-1. Abra la paleta de comandos y ejecute **Git: Clonar** para clonar el repositorio de GitHub ``https://github.com/microsoftlearning/dp-420-cosmos-db-dev`` en una carpeta local de su elección.
+1. Abre la paleta de comandos y ejecuta **Git: Clonar** para clonar el repositorio de GitHub ``https://github.com/microsoftlearning/dp-420-cosmos-db-dev`` en una carpeta local de tu elección.
 
-    > &#128161; Puede usar el método abreviado de teclado **CTRL+MAYÚS+P** para abrir la paleta de comandos.
+    > &#128161; Puedes usar el método abreviado de teclado **CTRL+MAYÚS+P** para abrir la paleta de comandos.
 
 1. Una vez clonado el repositorio, abra la carpeta local que seleccionó en **Visual Studio Code**.
 
@@ -30,29 +30,33 @@ Azure Cosmos DB es un servicio de base de datos NoSQL basado en la nube que admi
 
 1. Vaya a Azure Portal (``portal.azure.com``) desde una nueva ventana o pestaña del explorador web.
 
-1. Inicie sesión en el portal con las credenciales de Microsoft asociadas a su suscripción.
+1. Inicia sesión en el portal con las credenciales de Microsoft asociadas a tu suscripción.
 
-1. Seleccione **+ Crear un recurso**, busque *Cosmos DB* y, a continuación, cree un nuevo recurso de cuenta de **Azure Cosmos DB for NoSQL** con la siguiente configuración, dejando todas las opciones restantes en sus valores predeterminados:
+1. Selecciona **+ Crear un recurso**, busca *Cosmos DB* y, a continuación, crea un nuevo recurso de cuenta de **Azure Cosmos DB for NoSQL** con la siguiente configuración, dejando todas las opciones restantes en sus valores predeterminados:
 
     | **Configuración** | **Valor** |
     | ---: | :--- |
-    | **Suscripción** | *Su suscripción de Azure existente* |
-    | **Grupo de recursos** | *Seleccione un grupo de recursos ya existente o cree un nuevo* |
-    | **Account Name** | *Escriba un nombre único global*. |
-    | **Ubicación** | *seleccione cualquier región disponible* |
-    | **Capacity mode (Modo de capacidad)** | *Sin servidor* |
+    | **Tipo de carga de trabajo** | **Aprendizaje** |
+    | **Suscripción** | *Tu suscripción a Azure existente* |
+    | **Grupo de recursos** | *Selecciona un grupo de recursos ya existente o crea un nuevo* |
+    | **Nombre de cuenta** | *Escribe un nombre único global*. |
+    | **Ubicación** | *Selecciona cualquier región disponible* |
+    | **Capacity mode (Modo de capacidad)** | *Rendimiento aprovisionado* |
+    | **Aplicación de descuento por nivel Gratis** | *No aplicar* |
 
-    > &#128221; Es posible que los entornos de laboratorio tengan restricciones que le impidan crear un nuevo grupo de recursos. Si es así, use el grupo de recursos existente creado previamente.
+    > &#128221; Es posible que los entornos de laboratorio tengan restricciones que te impidan crear un nuevo grupo de recursos. Si es así, usa el grupo de recursos existente creado previamente.
 
-1. Espere a que se complete la tarea de implementación antes de continuar con esta tarea.
+1. Espera a que se complete la tarea de implementación antes de continuar con esta tarea.
 
-1. Vaya al recurso de cuenta de **Azure Cosmos DB** recién creado y vaya al panel **Claves**.
+1. Ve al recurso de cuenta de **Azure Cosmos DB** recién creado y, después, ve al panel **Claves**.
 
-1. Este panel contiene los detalles de conexión y las credenciales necesarias para conectarse a la cuenta desde el SDK. Específicamente:
+1. Este panel contiene los detalles de conexión y las credenciales necesarias para conectarte a la cuenta desde el SDK. Específicamente:
 
     1. Observe el campo **URI**. Usará este valor de **endpoint** más adelante en este ejercicio.
 
-    1. Observe el campo **PRIMARY KEY**. Usará este valor de **clave** más adelante en este ejercicio.
+    1. Observe el campo **PRIMARY KEY**. Usará el valor **key** más adelante en este ejercicio.
+
+    1. Observe el campo **CADENA DE CONEXIÓN PRINCIPAL**. Usará este valor de **cadena de conexión** más adelante en este ejercicio.
 
 1. En el menú de recursos, seleccione **Explorador de datos**.
 
@@ -63,6 +67,9 @@ Azure Cosmos DB es un servicio de base de datos NoSQL basado en la nube que admi
     | **Configuración** | **Valor** |
     | --: | :-- |
     | **Id. de base de datos** | *``cosmicworks``* |
+    | **Aprovisionar rendimiento** | enabled |
+    | **Rendimiento de base de datos** | **Manual** |
+    | **RU/s necesarios de base de datos** | ``1000`` |
 
 1. De nuevo en el panel **Data Explorer**, observe el nodo de base de datos **cosmicworks** dentro de la jerarquía.
 
@@ -74,7 +81,7 @@ Azure Cosmos DB es un servicio de base de datos NoSQL basado en la nube que admi
     | --: | :-- |
     | **Id. de base de datos** | *Usar existente* &vert; *cosmicworks* |
     | **Id. de contenedor** | *``products``* |
-    | **Clave de partición** | *``/categoryId``* |
+    | **Clave de partición** | *``/category/name``* |
 
 1. De nuevo en el panel **Data Explorer**, expanda el nodo de base de datos **cosmicworks** y observe el nodo contenedor **productos** dentro de la jerarquía.
 
@@ -276,7 +283,7 @@ Usará una utilidad de línea de comandos que crea una base de datos de **cosmic
 1. Instale la herramienta de línea de comandos [cosmicworks][nuget.org/packages/cosmicworks] para su uso global en la máquina.
 
     ```
-    dotnet tool install cosmicworks --global --version 1.*
+    dotnet tool install --global CosmicWorks --version 2.3.1
     ```
 
     > &#128161; Este comando puede tardar un par de minutos en completarse. Este comando generará el mensaje de advertencia (*Tool "cosmicworks" ya está instalado) si ya ha instalado la versión más reciente de esta herramienta en el pasado.
@@ -285,15 +292,14 @@ Usará una utilidad de línea de comandos que crea una base de datos de **cosmic
 
     | **Opción** | **Valor** |
     | ---: | :--- |
-    | **--endpoint** | *El valor del punto de conexión que copió anteriormente en este laboratorio* |
-    | **--key** | *El valor de clave que copió anteriormente en este laboratorio* |
-    | **--datasets** | *product* |
+    | **-c** | *El valor de la cadena de conexión que ha comprobado anteriormente en este laboratorio* |
+    | **--number-of-employees** | *El comando cosmicworks rellena la base de datos tanto con empleados como con contenedores de productos con 1000 y 200 elementos, respectivamente, a menos que se especifique lo contrario.* |
 
-    ```
-    cosmicworks --endpoint <cosmos-endpoint> --key <cosmos-key> --datasets product
+    ```powershell
+    cosmicworks -c "connection-string" --number-of-employees 0 --disable-hierarchical-partition-keys
     ```
 
-    > &#128221; Por ejemplo, si el punto de conexión es **https&shy;://dp420.documents.azure.com:443/** y la clave es **fDR2ci9QgkdkvERTQ==**, el comando sería: ``cosmicworks --endpoint https://dp420.documents.azure.com:443/ --key fDR2ci9QgkdkvERTQ== --datasets product``
+    > &#128221; Por ejemplo, si el punto de conexión es **https&shy;://dp420.documents.azure.com:443/** y la clave es **fDR2ci9QgkdkvERTQ==**, el comando sería: ``cosmicworks -c "AccountEndpoint=https://dp420.documents.azure.com:443/;AccountKey=fDR2ci9QgkdkvERTQ==" --number-of-employees 0 --disable-hierarchical-partition-keys``
 
 1. Espere a que el comando **cosmicworks** termine de poblar la cuenta con una base de datos, un contenedor y elementos.
 
