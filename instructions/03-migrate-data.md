@@ -155,7 +155,7 @@ Ahora que los recursos de Azure Cosmos DB for NoSQL están en vigor, creará un 
     ```
     SELECT 
         p.name, 
-        p.categoryName as category, 
+        p.category.name as category, 
         p.price 
     FROM 
         products p
